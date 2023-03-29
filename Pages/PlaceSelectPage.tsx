@@ -10,9 +10,6 @@ import { useNavigation } from '@react-navigation/native';
 
 
 
-
-
-
 // const PlaceSelectPage = () => {
 
 //     const navigation = useNavigation();

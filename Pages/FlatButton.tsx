@@ -15,7 +15,7 @@ export default function FlatButton(){
     return(
     <SafeAreaView>
         <View>
-            <View>
+            <View style={styles.container2}>
                 <View>
                 <TouchableOpacity onPress={()=> navigation.navigate("Best Moves")}>
                     <View style = {styles.button2}>
@@ -25,8 +25,7 @@ export default function FlatButton(){
                 </View>
                 
                 <View>
-                <TouchableOpacity 
-                onPress={()=> navigation.navigate("Welcome Page")}>
+                <TouchableOpacity onPress={()=> navigation.navigate("Welcome Page")}>
                     <View style = {styles.button3}>
                         <Text style = {styles.buttonText4}> Cancel</Text>
                     </View>
@@ -58,8 +57,9 @@ const styles = StyleSheet.create({
         // flexWrap: 'wrap',
         // justifyContent: 'flex-end',
         // flex: 1,
-       borderColor: 'red',
-       borderWidth: 12,
+       marginTop: 235,
+       marginLeft: 100,
+       marginRight: 100,
     },
 
     row:{
@@ -119,7 +119,7 @@ const styles = StyleSheet.create({
         width: 160,
         height: 50,
         alignSelf: 'center',
-        marginTop: 235,
+        
     },
 
     button3: {
