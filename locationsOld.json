@@ -1,0 +1,599 @@
+{
+    "locations": [{
+        "St. Louis, MO":{
+            "Location 1": {
+                "Venue Name": "Marquee Restaurant & Lounge",
+                "Address": "1911 Locust Saint Louis, MO 63103",
+                "Time": "6PM-3AM",
+                "Date": "August 1, 2023",
+                "Title": "R&B Vibes",
+                "Flyer": "Locations/EventFlyers/Stl/4C1FE0CB-4636-441A-8017-F30C42AF76F3.png",
+                "Category": [
+                    "Bar",
+                    "Club",
+                    "Restaurant"
+                ],
+                "Promoter Image": "Locations/PromoterImages/Headshot4.jpg",
+                "Promoter Name": "Joseph K.",
+                "Cover Charge": "10",
+                "Age Requirement": "21+",
+                "Directions": "https://www.google.com/search?q=marquee+lounge+st+louis&rlz=1C5MACD_enUS1020US1021&oq=mar&aqs=chrome.0.35i39i355j46i39i175i199j69i59j69i60l2j69i61l2j69i60.1335j0j7&sourceid=chrome&ie=UTF-8"
+            },
+            "Location 2": {
+                "Venue Name": "Tin Roof St. Louis",
+                "Address": "1000 Clark Avenue",
+                "Time": "11AM-3AM ",
+                "Date": "August 1, 2023",
+                "Title": "Better Than Bar Food",
+                "Flyer": "Locations/EventFlyers/Stl/305238713_484243050375725_4305135684379791722_n.jpg",
+                "Category": [
+                    "Bar",
+                    "Club",
+                    "Restaurant"
+                ],
+                "Promoter Image": "Locations/PromoterImages/Headshot4.jpg",
+                "Promoter Name": "Joseph K.",
+                "Cover Charge": "0",
+                "Age Requirement": "18+",
+                "Directions": "https://www.google.com/search?q=tin+roof+stl&rlz=1C5MACD_enUS1020US1021&oq=tin+r&aqs=chrome.0.69i59j69i57j35i39j46i175i199i512j0i131i433i512j69i60l3.912j0j9&sourceid=chrome&ie=UTF-8"
+            },
+            "Location 3": {
+                "Venue Name": "Open Concept",
+                "Address": "4130 Manchester Ave., St. Louis, MO 63110",
+                "Time": "5PM-1AM",
+                "Date": "August 1, 2023",
+                "Title": "Saturday Night Vibe",
+                "Flyer": "Locations/EventFlyers/Stl/59709420_2182311251861694_6313552532996096000_n.jpg",
+                "Category": [
+                    "Bar",
+                    "Club",
+                    "Restaurant"
+                ],
+                "Promoter Image": "Locations/PromoterImages/Headshot4.jpg",
+                "Promoter Name": "Joseph K.",
+                "Cover Charge": "5",
+                "Age Requirement": "21+",
+                "Directions": "https://www.google.com/search?q=open+concept+stl&rlz=1C5MACD_enUS1020US1021&oq=open&aqs=chrome.0.69i59j69i57j46i131i199i433i465i512j46i199i433i465i512j0i512j69i61j69i60j69i61.943j0j9&sourceid=chrome&ie=UTF-8"
+            },
+            "Location 4": {
+                "Venue Name": "Club Onyx St. Louis",
+                "Address": "247 S 88th St, Centreville, IL 62207",
+                "Time": "8PM-5AM",
+                "Date": "August 1, 2023",
+                "Title": "Saint Ryan Birthday Bash",
+                "Flyer": "Locations/EventFlyers/Stl/ClubOnyx1.jpeg",
+                "Category": [
+                    "Bar",
+                    "Club",
+                    "Restaurant"
+                ],
+                "Promoter Image": "Locations/PromoterImages/Headshot4.jpg",
+                "Promoter Name": "Joseph K.",
+                "Cover Charge": "20",
+                "Age Requirement": "21+",
+                "Directions": "https://www.google.com/search?q=club+onyx+st.louis&rlz=1C5MACD_enUS1020US1021&oq=club+onyx+st.louis&aqs=chrome..69i57j0i22i30l5.8235j0j9&sourceid=chrome&ie=UTF-8"
+            }
+        },
+    
+        "Kansas City, MO": {
+            "Location 1": {
+                "Venue Name": "Bridger's Westport",
+                "Address": "504 Westport Rd. Kansas City, MO 64111",
+                "Time": "10PM-3AM",
+                "Date": "June 1, 2023",
+                "Title": "Feel Good Friday",
+                "Flyer": "Locations/EventFlyers/Kansas City/bridgers1-1024x1024.png",
+                "Category": [
+                    "Bar",
+                    "Club",
+                    "Restaurant"
+                ],
+                "Promoter Image": "Locations/PromoterImages/Headshot4.jpg",
+                "Promoter Name": "Joseph K.",
+                "Cover Charge": "10",
+                "Age Requirement": "18+",
+                "Directions": "https://www.google.com/search?q=bridgers+kansas+city&rlz=1C5MACD_enUS1020US1021&oq=bridg&aqs=chrome.0.35i39i355j46i39i175i199j69i59j69i57j0i512j69i60j69i61j69i60.3167j0j9&sourceid=chrome&ie=UTF-8"
+            },
+            "Location 2": {
+                "Venue Name": "Yard Bar Westport",
+                "Address": "4115 Mill Street, Kansas City, MO 64111",
+                "Time": "Saturday Night Live",
+                "Date": "June 1, 2023",
+                "Title": "8pm - 2am",
+                "Flyer": "Locations/EventFlyers/Kansas City/yardbarKC.jpeg",
+                "Category": [
+                    "Bar",
+                    "Restaurant"
+                ],
+                "Promoter Image": "Locations/PromoterImages/Headshot4.jpg",
+                "Promoter Name": "Joseph K.",
+                "Cover Charge": "0",
+                "Age Requirement": "18+",
+                "Directions": "https://www.google.com/search?gs_ssp=eJzj4tVP1zc0TM9IyTa0KMszYLRSNaiwME82SE1LsUgzsTBPM0tJszKoME2xNDZPTTNLsjQyM09NSvQSr0wsSlFISixSyE7MK04sVkjOLKlUyM0HAKYpGJc&q=yard+bar+kansas+city+mo&rlz=1C5MACD_enUS1020US1021&oq=yard+ba&aqs=chrome.1.69i57j46i39i175i199j69i59l2j46i20i175i199i263i512j69i61j69i60l2.3604j0j9&sourceid=chrome&ie=UTF-8"
+            },
+            "Location 3": {
+                "Venue Name": "Prime Social",
+                "Address": "4622 Pennsylvania Ave, Kansas City, MO 64112",
+                "Time": "3PM–12AM",
+                "Date": "June 1, 2023",
+                "Title": "Elevate Your Expectations",
+                "Flyer": "Locations/EventFlyers/Kansas City/Prime_Social_21-11-16---34.jpeg",
+                "Category": [
+                    "Bar",
+                    "Club",
+                    "Restaurant"
+                ],
+                "Promoter Image": "Locations/PromoterImages/Headshot4.jpg",
+                "Promoter Name": "Joseph K.",
+                "Cover Charge": "5",
+                "Age Requirement": "21+",
+                "Directions": "https://www.google.com/search?q=prime+social+kansas+city&rlz=1C5MACD_enUS1020US1021&oq=pr&aqs=chrome.0.69i59l3j69i57j69i60l4.644j0j9&sourceid=chrome&ie=UTF-8"
+            },
+            "Location 4": {
+                "Venue Name": "Society KC",
+                "Address": "2050 Central St. Kansas City, MO 64108",
+                "Time": "10AM-1:30AM",
+                "Date": "June 1, 2023",
+                "Title": "Latin Night",
+                "Flyer": "Locations/EventFlyers/Kansas City/Artboard-76-100.jpg",
+                "Category": [
+                    "Bar",
+                    "Club",
+                    "Restaurant"
+                ],
+                "Promoter Image": "Locations/PromoterImages/Headshot4.jpg",
+                "Promoter Name": "Joseph K.",
+                "Cover Charge": "10",
+                "Age Requirement": "21+",
+                "Directions": "https://www.google.com/search?q=society+kansas+city&rlz=1C5MACD_enUS1020US1021&oq=soci&aqs=chrome.0.69i59j69i57j46i131i199i433i465i512j46i175i199i512j69i60l4.776j0j9&sourceid=chrome&ie=UTF-8"
+            }
+        },
+    
+        "Columbia, MO": {
+            "Location 1": {
+                "Venue Name": "Silverball Arcade & Bar",
+                "Address": "122 S 9th Street, Columbia, MO 65201",
+                "Time": "12PM-1AM",
+                "Date": "October 1, 2023",
+                "Title": "Bounce w/ Me",
+                "Flyer": "Locations/EventFlyers/Columbia/327165540_674889484428690_7551792279897509247_n.jpg",
+                "Category": [
+                    "Bar",
+                    "Club",
+                    "Restaurant"
+                ],
+                "Promoter Image": "Locations/PromoterImages/Headshot4.jpg",
+                "Promoter Name": "Joseph K.",
+                "Cover Charge": "0",
+                "Age Requirement": "21+",
+                "Directions": "https://www.google.com/search?q=silverball+columbia+mo&rlz=1C5MACD_enUS1020US1021&oq=sil&aqs=chrome.0.69i59j69i57j0i20i131i263i433i512j69i60l5.621j0j9&sourceid=chrome&ie=UTF-8"
+            },
+            "Location 2": {
+                "Venue Name": "The Gold Bar Club",
+                "Address": "1025 E. Broadway 65201",
+                "Time": "6:30PM-1:30AM",
+                "Date": "October 1, 2023",
+                "Title": "Baddies Night Out",
+                "Flyer": "Locations/EventFlyers/Columbia/https___cdn.evbuc.com_images_452308179_451896285_1_original.png",
+                "Category": [
+                    "Bar",
+                    "Club",
+                    "Party"
+                ],
+                "Promoter Image": "Locations/PromoterImages/Headshot4.jpg",
+                "Promoter Name": "Atah K.",
+                "Cover Charge": "15",
+                "Age Requirement": "18+",
+                "Directions": "https://www.google.com/search?q=goldbarcolumbia+mo&rlz=1C5MACD_enUS1020US1021&oq=gold&aqs=chrome.0.69i59l2j69i57j69i59j35i39j69i61j69i60l2.608j0j9&sourceid=chrome&ie=UTF-8"
+            },
+            "Location 3": {
+                "Venue Name": "Willies Pub and Pool",
+                "Address": "1109 E Broadway Columbia, MO 65201",
+                "Time": "11AM - 1AM",
+                "Date": "October 1, 2023",
+                "Title": "Turkey Party",
+                "Flyer": "Locations/EventFlyers/Columbia/d3d3LndpbGxpZXNmaWVsZGhvdXNlLmNvbQ--.jpg",
+                "Category": [
+                    "Bar",
+                    "Club",
+                    "Party"
+                ],
+                "Promoter Image": "Locations/PromoterImages/Headshot4.jpg",
+                "Promoter Name": "Joseph K.",
+                "Cover Charge": "20",
+                "Age Requirement": "21+",
+                "Directions": "https://www.google.com/search?q=willies+columbia&rlz=1C5MACD_enUS1020US1021&sxsrf=AJOqlzWtG5svI8oGDOisXG0zgkpeMWKu5w%3A1679014167249&ei=F7kTZNPrDtqC0PEP2_ai4As&gs_ssp=eJzj4tZP1zcsSTPLLcoxN2C0UjWosDBPSU4yTzZOTDRLSUozN7UyqEhNsTQyS0k1NUsyNkg0MTD1EijPzMnJTC1WSM7PKc1NykwEAOLaFck&oq=willies+col&gs_lcp=Cgxnd3Mtd2l6LXNlcnAQAxgAMhMILhAUEK8BEMcBEIcCEIAEEOoEMgsILhCABBDHARCvATIFCAAQgAQyBQgAEIAEMgcIABCABBAKMgsILhCABBDHARCvATILCC4QgAQQxwEQrwEyBwgAEIAEEAoyBwgAEIAEEAoyBQgAEIYDOgkIABAeEA0QsAM6EwguEIAEEBQQhwIQxwEQrwEQ6gQ6DQguEIAEEMcBEK8BEAo6BggAEAoQQzoLCC4QrwEQxwEQgARKBAhBGAFQ7wJYtgRg6gpoAXAAeACAAZwBiAGSA5IBAzAuM5gBAKABAcgBAcABAQ&sclient=gws-wiz-serp"
+            },
+            "Location 4": {
+                "Venue Name": "My House Nightclub",
+                "Address": "119 S. 7th Street, Columbia, MO, United States, Missouri",
+                "Time": "5PM-1AM",
+                "Date": "October 1, 2023",
+                "Title": "Fall Series: Steve Aoki",
+                "Flyer": "Locations/EventFlyers/Columbia/ezVcIg4.png",
+                "Category": [
+                    "Bar",
+                    "Club"
+                ],
+                "Promoter Image": "Locations/PromoterImages/Headshot4.jpg",
+                "Promoter Name": "Joseph K.",
+                "Cover Charge": "15",
+                "Age Requirement": "21+",
+                "Directions": "https://www.google.com/search?q=myhouse+columbia+mo&rlz=1C5MACD_enUS1020US1021&oq=myh&aqs=chrome.1.69i57j69i59j35i39j0i512l2j46i175i199i512j0i131i433i512j69i60.3244j0j9&sourceid=chrome&ie=UTF-8"
+            }
+        },
+    
+        "Chicago, IL": {
+            "Location 1": {
+                "Venue Name": "Smartbar",
+                "Address": "3730 N Clark Street Chicago, IL 60613",
+                "Time": "10PM-5AM",
+                "Date": "July 1, 2023",
+                "Title": "HyperActive",
+                "Flyer": "Locations/EventFlyers/Chicago/us-smart-bar-chicago.jpg",
+                "Category": [
+                    "Bar",
+                    "Club",
+                    "Restaurant"
+                ],
+                "Promoter Image": "Locations/PromoterImages/Headshot4.jpg",
+                "Promoter Name": "Joseph K.",
+                "Cover Charge": "10",
+                "Age Requirement": "21+",
+                "Directions": "https://www.google.com/search?q=smart+bar+chicago&rlz=1C5MACD_enUS1020US1021&oq=sma&aqs=chrome.0.35i39i355j46i39i175i199j69i57j46i20i175i199i263i512j69i60l4.752j0j9&sourceid=chrome&ie=UTF-8"
+            },
+            "Location 2": {
+                "Venue Name": "Le Nocturne Chicago",
+                "Address": "4810 N Broadway, Chicago, IL, 60640",
+                "Time": "10PM-5AM",
+                "Date": "July 1, 2023",
+                "Title": "Afro Fusion",
+                "Flyer": "Locations/EventFlyers/Chicago/326734826_474076898272738_386379032857538906_n.png",
+                "Category": [
+                    "Bar",
+                    "Club",
+                    "Restaurant"
+                ],
+                "Promoter Image": "Locations/PromoterImages/Headshot4.jpg",
+                "Promoter Name": "Joseph K.",
+                "Cover Charge": "15",
+                "Age Requirement": "18+",
+                "Directions": "https://www.google.com/search?q=le+nocturne+chicago&rlz=1C5MACD_enUS1020US1021&oq=le+nocturne+chicago&aqs=chrome.0.69i59j46i175i199i512j0i512j0i22i30l2j69i60l3.2602j0j9&sourceid=chrome&ie=UTF-8"
+            },
+            "Location 3": {
+                "Venue Name": "Tribe Supper Club",
+                "Address": "1239 W Lake St, Chicago, IL 60607",
+                "Time": "5PM-2AM",
+                "Date": "July 1, 2023",
+                "Title": "Night Life",
+                "Flyer": "Locations/EventFlyers/Chicago/269829383_104788222075886_7356608400114255171_n.jpg",
+                "Category": [
+                    "Bar",
+                    "Club",
+                    "Restaurant"
+                ],
+                "Promoter Image": "Locations/PromoterImages/Headshot4.jpg",
+                "Promoter Name": "Joseph K.",
+                "Cover Charge": "10",
+                "Age Requirement": "21+",
+                "Directions": "https://www.google.com/search?q=tribe+supper+club+menu&rlz=1C5MACD_enUS1020US1021&oq=tri&aqs=chrome.0.69i59l3j69i57j69i60l3j69i61.668j0j9&sourceid=chrome&ie=UTF-8"
+            },
+            "Location 4": {
+                "Venue Name": "Joy District",
+                "Address": "112 W Hubbard St, Chicago, IL 60654",
+                "Time": "9pm-2am",
+                "Date": "July 1, 2023",
+                "Title": "Hot N Here Party",
+                "Flyer": "Locations/EventFlyers/Chicago/joy-district-3.jpg",
+                "Category": [
+                    "Bar",
+                    "Club",
+                    "Restaurant"
+                ],
+                "Promoter Image":"Locations/PromoterImages/Headshot4.jpg",
+                "Promoter Name": "Joseph K.",
+                "Cover Charge": "10",
+                "Age Requirement": "21+",
+                "Directions": "https://www.google.com/search?q=joy+district+chicago&rlz=1C5MACD_enUS1020US1021&oq=jo&aqs=chrome.1.69i57j69i59j46i20i263i512j0i512j69i60l4.1947j0j9&sourceid=chrome&ie=UTF-8"
+            }
+        },
+    
+        "Macomb, IL": {
+            "Location 1": {
+                "Venue Name": "The Forum/Two Dogs",
+                "Address": "124 N Lafayette St, Macomb, IL 61455",
+                "Time": "24 HRS",
+                "Date": "September 1, 2023",
+                "Title": "Noche Latina",
+                "Flyer": "Locations/EventFlyers/Macomb/c657-Pub-and-bar-The-Forum-Two-Dogs-photo-1.jpg",
+                "Category": [
+                    "Bar",
+                    "Club"
+                ],
+                "Promoter Image": "Locations/PromoterImages/Headshot4.jpg",
+                "Promoter Name": "Joseph K.",
+                "Cover Charge": "0",
+                "Age Requirement": "21+",
+                "Directions": "https://www.google.com/search?q=the+forum+two+dogs+macomb+il&rlz=1C5MACD_enUS1020US1021&oq=the+&aqs=chrome.2.69i59l3j69i57j69i60j69i65j69i61j69i60.1613j0j9&sourceid=chrome&ie=UTF-8"
+            },
+            "Location 2": {
+                "Venue Name": "The Ritz",
+                "Address": "215 N Randolph St, Macomb, IL 61455",
+                "Time": "7PM-2AM",
+                "Date": "September 1, 2023",
+                "Title": "Karaoke",
+                "Flyer": "Locations/EventFlyers/Macomb/348s.jpg",
+                "Category": [
+                    "Bar",
+                    "Club",
+                    "Restaurant"
+                ],
+                "Promoter Image": "Locations/PromoterImages/Headshot4.jpg",
+                "Promoter Name": "Joseph K.",
+                "Cover Charge": "5",
+                "Age Requirement": "21+",
+                "Directions": "https://www.google.com/search?q=the+ritz+macomb+il&rlz=1C5MACD_enUS1020US1021&oq=the+ri&aqs=chrome.0.69i59j69i57j46i20i175i199i263i512j0i512j0i131i433i512j69i61l2j69i60.1110j0j9&sourceid=chrome&ie=UTF-8"
+            },
+            "Location 3": {
+                "Venue Name": "The Café",
+                "Address": "8 West Side Square, Macomb, IL 61455",
+                "Time": "3PM-2AM",
+                "Date": "September 1, 2023",
+                "Title": "Open Mic Night",
+                "Flyer": "Locations/EventFlyers/Macomb/011919_cafe_05.png",
+                "Category": [
+                    "Bar",
+                    "Club",
+                    "Restaurant"
+                ],
+                "Promoter Image": "Locations/PromoterImages/Headshot4.jpg",
+                "Promoter Name": "Joseph K.",
+                "Cover Charge": "0",
+                "Age Requirement": "21+",
+                "Directions": "https://www.google.com/search?q=the+cafe+macomb+il&rlz=1C5MACD_enUS1020US1021&oq=the+ca&aqs=chrome.0.69i59j69i57j46i20i175i199i263i512j46i199i465i512j46i433i512j69i61l2j69i60.1987j0j9&sourceid=chrome&ie=UTF-8"
+            },
+            "Location 4": {
+                "Venue Name": "Sports Corner @ 124",
+                "Address": "124 N Randolph St, Macomb, IL. 309-421-0165",
+                "Time": "11:30AM-11:30PM",
+                "Date": "September 1, 2023",
+                "Title": "Leathernecks Win!!",
+                "Flyer": "Locations/EventFlyers/Macomb/298397031_484333217030552_4879314776579523027_n.png",
+                "Category": [
+                    "Bar",
+                    "Restaurant"
+                ],
+                "Promoter Image": "Locations/PromoterImages/Headshot4.jpg",
+                "Promoter Name": "Joseph K.",
+                "Cover Charge": "0",
+                "Age Requirement": "18+",
+                "Directions": "https://www.google.com/search?q=sports+corner+at+124&rlz=1C5MACD_enUS1020US1021&oq=spo&aqs=chrome.0.69i59j69i57j46i199i433i465i512j0i131i433i512j0i20i263i512j69i60j69i61l2.618j0j9&sourceid=chrome&ie=UTF-8"
+            }
+        },
+    
+        "Dallas, TX": {
+            "Location 1": {
+                "Venue Name": "Bitter End Dallas",
+                "Address": "2826 Elm St, Dallas, TX 75226",
+                "Time": "2PM-12AM",
+                "Date": "May 1, 2023",
+                "Title": "Deep Elum",
+                "Flyer": "Locations/EventFlyers/Dallas/294796538_575128814090540_7637756476909314614_n.png",
+                "Category": [
+                    "Bar",
+                    "Club",
+                    "Restaurant"
+                ],
+                "Promoter Image": "Locations/PromoterImages/Headshot4.jpg",
+                "Promoter Name": "Joseph K.",
+                "Cover Charge": "15",
+                "Age Requirement": "21+",
+                "Directions": "https://www.google.com/search?q=bitter+end+dallas+tx&rlz=1C5MACD_enUS1020US1021&oq=bitt&aqs=chrome.0.69i59j69i57j0i433i512j46i433i512j0i433i512j69i60l3.1104j0j9&sourceid=chrome&ie=UTF-8"
+            },
+            "Location 2": {
+                "Venue Name": "Rokwood Nightclub and Bar",
+                "Address": "600 Jackson St, Dallas, TX 75202",
+                "Time": "10PM-2AM",
+                "Date": "May 1, 2023",
+                "Title": "I wanna ROK R&B Party",
+                "Flyer": "Locations/EventFlyers/Dallas/13923e58426b75e512c42f29d1f1059203ec2ce29bbe28643dffe061087715e6-rimg-w1200-h1200-gmir.png",
+                "Category": [
+                    "Bar",
+                    "Club",
+                    "Restaurant"
+                ],
+                "Promoter Image": "Locations/PromoterImages/Headshot4.jpg",
+                "Promoter Name": "Joseph K.",
+                "Cover Charge": "10",
+                "Age Requirement": "21+",
+                "Directions": "https://www.google.com/search?q=rokwood+nightclub+and+bar&rlz=1C5MACD_enUS1020US1021&oq=rok&aqs=chrome.0.35i39i355j46i39i175i199j69i59j69i57j46i199i433i465i512j0i433i512l4j0i131i433i512.2538j0j9&sourceid=chrome&ie=UTF-8"
+            },
+            "Location 3": {
+                "Venue Name": "Club VIVO",
+                "Address": "1930 Pacific Ave, Dallas, TX 75201",
+                "Time": "10PM-2AM",
+                "Date": "May 1, 2023",
+                "Title": "Sold Out Saturdays",
+                "Flyer": "Locations/EventFlyers/Dallas/Club-Vevo-Dallas-TX.jpg",
+                "Category": [
+                    "Bar",
+                    "Club",
+                    "Restaurant"
+                ],
+                "Promoter Image": "Locations/PromoterImages/Headshot4.jpg",
+                "Promoter Name": "Joseph K.",
+                "Cover Charge": "15",
+                "Age Requirement": "21+",
+                "Directions": "https://www.google.com/search?q=club+vivo+dallas+tx&rlz=1C5MACD_enUS1020US1021&oq=club+viv&aqs=chrome.0.69i59j69i57j46i131i175i199i433i512l2j0i512j46i175i199i512l2j69i60.5950j0j9&sourceid=chrome&ie=UTF-8"
+            },
+            "Location 4": {
+                "Venue Name": "Amora Lounge",
+                "Address": "12255 Greenville Ave #130, Dallas, TX 75243",
+                "Time": "4PM-2AM",
+                "Date": "May 1, 2023",
+                "Title": "The Silent Party",
+                "Flyer": "Locations/EventFlyers/Dallas/AmoraDTX.jpeg",
+                "Category": [
+                    "Bar",
+                    "Club",
+                    "Restaurant"
+                ],
+                "Promoter Image": "Locations/PromoterImages/Headshot4.jpg",
+                "Promoter Name": "Joseph K.",
+                "Cover Charge": "20",
+                "Age Requirement": "21+",
+                "Directions": "https://www.google.com/search?gs_ssp=eJzj4tVP1zc0LKgwNCnJMzE3YLRSNaiwMDNJNkwzMrBMNrW0NDc0tzKosDQyTjE0NU81tEgyT7Q0MvTiT8zNL0pUSEnMyUksViipAACiRBPc&q=amora+dallas+tx&rlz=1C5MACD_enUS1020US1021&oq=amo&aqs=chrome.1.69i57j46i39i175i199j46i10i131i199i433i465i512j69i60l4j5.6001j0j9&sourceid=chrome&ie=UTF-8"
+            }
+        },
+    
+        "South Bend, IL": {
+            "Location 1": {
+                "Venue Name": "Howard Park Public House",
+                "Address": "602 E Jefferson Blvd, South Bend, IN 46617",
+                "Time": "11AM-10PM",
+                "Date": "March 1, 2023",
+                "Title": "Hen House Party",
+                "Flyer": "Locations/EventFlyers/SouthBend/hpph-bar.png",
+                "Category": [
+                    "Bar",
+                    "Club",
+                    "Restaurant"
+                ],
+                "Promoter Image": "Locations/PromoterImages/Headshot4.jpg",
+                "Promoter Name": "Joseph K.",
+                "Cover Charge": "0",
+                "Age Requirement": "18+",
+                "Directions": "https://www.google.com/search?q=howard+park+public+house&rlz=1C5MACD_enUS1020US1021&oq=howar&aqs=chrome.0.69i59j69i57j0i131i433i512j46i131i433i512j46i131i433j46i175i199i512j0i3j69i61.1123j0j9&sourceid=chrome&ie=UTF-8"
+            },
+            "Location 2": {
+                "Venue Name": "Bar Louie",
+                "Address": "7320 Aspect Dr, Mishawaka, IN 46530",
+                "Time": "11AM-2AM",
+                "Date": "March 1, 2023",
+                "Title": "Big GAME",
+                "Flyer": "Locations/EventFlyers/SouthBend/GIUUZGNSPRLVPNO2N57AXHVOJA.jpg",
+                "Category": [
+                    "Bar",
+                    "Club",
+                    "Restaurant"
+                ],
+                "Promoter Image": "Locations/PromoterImages/Headshot4.jpg",
+                "Promoter Name": "Joseph K.",
+                "Cover Charge": "0",
+                "Age Requirement": "18+",
+                "Directions": "https://www.google.com/search?q=bar+louie+south+bend+indiana&rlz=1C5MACD_enUS1020US1021&oq=bar+lou&aqs=chrome.0.69i59j46i39i175i199j69i59j69i57j46i131i199i433i465i512j69i60l3.2761j0j9&sourceid=chrome&ie=UTF-8"
+            },
+            "Location 3": {
+                "Venue Name": "Dockside Nightclub",
+                "Address": "1835 Lincolnway E, South Bend, IN 46613",
+                "Time": "9PM-3AM",
+                "Date": "March 1, 2023",
+                "Title": "Ship Show",
+                "Flyer": "Locations/EventFlyers/SouthBend/r954-Dockside-Nightclub-poster.jpg",
+                "Category": [
+                    "Bar",
+                    "Club",
+                    "Restaurant"
+                ],
+                "Promoter Image": "Locations/PromoterImages/Headshot4.jpg",
+                "Promoter Name": "Joseph K.",
+                "Cover Charge": "5",
+                "Age Requirement": "21+",
+                "Directions": "https://www.google.com/search?q=dockside+nightclub+south+bend+in&rlz=1C5MACD_enUS1020US1021&oq=Dock&aqs=chrome.0.69i59l2j69i57j35i39j0i10i131i433i512j69i60l2j69i61.2624j0j9&sourceid=chrome&ie=UTF-8"
+            },
+            "Location 4": {
+                "Venue Name": "The Garage Arcade Bar",
+                "Address": "503 E Colfax Ave, South Bend, IN 46617",
+                "Time": "5PM-2AM",
+                "Date": "March 1, 2023",
+                "Title": "Drunk Game Night",
+                "Flyer": "Locations/EventFlyers/SouthBend/thumbnail.jpg",
+                "Category": [
+                    "Bar",
+                    "Club",
+                    "Restaurant"
+                ],
+                "Promoter Image": "Locations/PromoterImages/Headshot4.jpg",
+                "Promoter Name": "Joseph K.",
+                "Cover Charge": "10",
+                "Age Requirement": "18+",
+                "Directions": "https://www.google.com/search?gs_ssp=eJwFwTEOgCAMAMC4mji6szjTYgKFJ_iLFlpcTAxx4PnerZvvHtGeNxnkBks5YBJhrE0iJpCoQQpMozNTsEgBWSHla_9udZ0Hd3U8Kjd1wuMHPNAWcg&q=the+garage+arcade+bar&rlz=1C5MACD_enUS1020US1021&oq=the+garage+ar&aqs=chrome.1.69i57j46i20i175i199i263i512j46i175i199i512l3j0i512j46i175i199i512j0i512j0i20i263i512.6920j0j9&sourceid=chrome&ie=UTF-8"
+            }
+        },
+    
+        "Washington, DC": {
+            "Location 1": {
+                "Venue Name": "Abigail",
+                "Address": "1730 M St NW #100, Washington, DC 20036",
+                "Time": "10PM-3AM",
+                "Date": "April 1, 2023",
+                "Title": "Abigail Presents: Draya Mitchell",
+                "Flyer": "Locations/EventFlyers/Washington/images.jpeg",
+                "Category": [
+                    "Bar",
+                    "Club",
+                    "Restaurant"
+                ],
+                "Promoter Image": "Locations/PromoterImages/Headshot4.jpg",
+                "Promoter Name": "Joseph K.",
+                "Cover Charge": "25",
+                "Age Requirement": "21+",
+                "Directions": "https://www.google.com/search?q=abigail+club+washington+dc&rlz=1C5MACD_enUS1020US1021&oq=abig&aqs=chrome.0.69i59j69i57j46i433i512l3j46i175i199i512j69i60l2.2669j0j9&sourceid=chrome&ie=UTF-8"
+            },
+            "Location 2": {
+                "Venue Name": "Lost Society",
+                "Address": "2001 14th St NW, Washington, DC 20009",
+                "Time": "3PM-3AM",
+                "Date": "April 1, 2023",
+                "Title": "The Hangout Party",
+                "Flyer": "Locations/EventFlyers/Washington/https___cdn.evbuc.com_images_444112839_89043343611_1_original.png",
+                "Category": [
+                    "Bar",
+                    "Club",
+                    "Restaurant"
+                ],
+                "Promoter Image": "Locations/PromoterImages/Headshot4.jpg",
+                "Promoter Name": "Joseph K.",
+                "Cover Charge": "13",
+                "Age Requirement": "21+",
+                "Directions": "https://www.google.com/search?q=lost+society+washington+dc&rlz=1C5MACD_enUS1020US1021&sxsrf=AJOqlzXUE_ZPOl2T6gVvwxQj4xcxBxJYuA%3A1679014540216&ei=jLoTZKvkDIjO0PEPrPyFwA8&ved=0ahUKEwir2vfJ4OH9AhUIJzQIHSx-AfgQ4dUDCBA&uact=5&oq=lost+society+washington+dc&gs_lcp=Cgxnd3Mtd2l6LXNlcnAQAzIOCC4QgAQQxwEQrwEQ6gQ6CggAEEcQ1gQQsANKBAhBGABQ4wFY4wFggg5oAXABeACAAZABiAGQAZIBAzAuMZgBAKABAcgBCMABAQ&sclient=gws-wiz-serp"
+            },
+            "Location 3": {
+                "Venue Name": "The Park at 14th",
+                "Address": "920 14th St NW, Washington, DC 20005",
+                "Time": "11AM-3AM",
+                "Date": "April 1, 2023",
+                "Title": "Cognac Vs. Tequila",
+                "Flyer": "Locations/EventFlyers/Washington/NightLife-Flyer-Banner-V2.jpg",
+                "Category": [
+                    "Bar",
+                    "Club",
+                    "Restaurant"
+                ],
+                "Promoter Image": "Locations/PromoterImages/Headshot4.jpg",
+                "Promoter Name": "Joseph K.",
+                "Cover Charge": "15",
+                "Age Requirement": "21+",
+                "Directions": "https://www.google.com/search?q=the+park+at+14th+washington+dc&rlz=1C5MACD_enUS1020US1021&oq=the+park+at+14th+wa&aqs=chrome.0.0i355i512j46i175i199i512j69i57.10678j0j9&sourceid=chrome&ie=UTF-8"
+            },
+            "Location 4": {
+                "Venue Name": "Focus Social Club",
+                "Address": "1348 H St NE, Washington, DC 20002",
+                "Time": "12PM-3AM",
+                "Date": "April 1, 2023",
+                "Title": "R&B Vibez",
+                "Flyer": "Locations/EventFlyers/Washington/https___cdn.evbuc.com_images_196593969_224089905260_1_original.png",
+                "Category": [
+                    "Bar",
+                    "Club",
+                    "Restaurant"
+                ],
+                "Promoter Image": "Locations/PromoterImages/Headshot4.jpg",
+                "Promoter Name": "Joseph K.",
+                "Cover Charge": "20",
+                "Age Requirement": "21+",
+                "Directions": "https://www.google.com/search?q=focus+dc+washington+dc&rlz=1C5MACD_enUS1020US1021&oq=focus+&aqs=chrome.0.69i59l3j69i57j46i175i199i512j46i199i465i512j0i131i433i512j69i60.1410j0j9&sourceid=chrome&ie=UTF-8"
+            }
+        }
+      }]
+    }
