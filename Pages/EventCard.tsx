@@ -3,7 +3,7 @@ import Event from "../backend/models/event.model"
 import { SafeAreaView, Text, View, StyleSheet, Image, TouchableOpacity, RefreshControl, ScrollView, FlatList} from 'react-native';
 import eventCardStyles from "../styles/eventCardStyles";
 
-export default function EventCard({navigation, route, event, eventCardStyles, user}) {
+export default function EventCard({navigation, route, event, eventCardStyles}) {
 
 
     /*const [img, setImg] = useState("");
@@ -22,7 +22,7 @@ export default function EventCard({navigation, route, event, eventCardStyles, us
     
     return (
         <View>
-            <TouchableOpacity style={eventCardStyles.card} onPress={() => navigation.navigate("Event Details", {event: event, user: user})}>
+            <TouchableOpacity style={eventCardStyles.card} onPress={() => navigation.navigate("Event Details", {event: event})}>
                 <Image style={eventCardStyles.cardImg}
                     source={{uri: `http://ec2-3-84-42-180.compute-1.amazonaws.com/Images/${event.event_flyer}`}}></Image>
             <View style={{flexDirection:'row', height: 50}}>   

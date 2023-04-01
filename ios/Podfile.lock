@@ -53,18 +53,17 @@ PODS:
   - React-callinvoker (0.71.6)
   - React-Codegen (0.71.6):
     - FBReactNativeSpec
-    - hermes-engine
     - RCT-Folly
     - RCTRequired
     - RCTTypeSafety
     - React-Core
+    - React-jsc
     - React-jsi
     - React-jsiexecutor
     - ReactCommon/turbomodule/bridging
     - ReactCommon/turbomodule/core
   - React-Core (0.71.6):
     - glog
-    - hermes-engine
     - RCT-Folly (= 2021.07.22.00)
     - React-Core/Default (= 0.71.6)
     - React-cxxreact (= 0.71.6)
@@ -75,7 +74,6 @@ PODS:
     - Yoga
   - React-Core/CoreModulesHeaders (0.71.6):
     - glog
-    - hermes-engine
     - RCT-Folly (= 2021.07.22.00)
     - React-Core/Default
     - React-cxxreact (= 0.71.6)
@@ -86,7 +84,6 @@ PODS:
     - Yoga
   - React-Core/Default (0.71.6):
     - glog
-    - hermes-engine
     - RCT-Folly (= 2021.07.22.00)
     - React-cxxreact (= 0.71.6)
     - React-hermes
@@ -96,7 +93,6 @@ PODS:
     - Yoga
   - React-Core/DevSupport (0.71.6):
     - glog
-    - hermes-engine
     - RCT-Folly (= 2021.07.22.00)
     - React-Core/Default (= 0.71.6)
     - React-Core/RCTWebSocket (= 0.71.6)
@@ -109,7 +105,6 @@ PODS:
     - Yoga
   - React-Core/RCTActionSheetHeaders (0.71.6):
     - glog
-    - hermes-engine
     - RCT-Folly (= 2021.07.22.00)
     - React-Core/Default
     - React-cxxreact (= 0.71.6)
@@ -120,7 +115,6 @@ PODS:
     - Yoga
   - React-Core/RCTAnimationHeaders (0.71.6):
     - glog
-    - hermes-engine
     - RCT-Folly (= 2021.07.22.00)
     - React-Core/Default
     - React-cxxreact (= 0.71.6)
@@ -131,7 +125,6 @@ PODS:
     - Yoga
   - React-Core/RCTBlobHeaders (0.71.6):
     - glog
-    - hermes-engine
     - RCT-Folly (= 2021.07.22.00)
     - React-Core/Default
     - React-cxxreact (= 0.71.6)
@@ -142,7 +135,6 @@ PODS:
     - Yoga
   - React-Core/RCTImageHeaders (0.71.6):
     - glog
-    - hermes-engine
     - RCT-Folly (= 2021.07.22.00)
     - React-Core/Default
     - React-cxxreact (= 0.71.6)
@@ -153,7 +145,6 @@ PODS:
     - Yoga
   - React-Core/RCTLinkingHeaders (0.71.6):
     - glog
-    - hermes-engine
     - RCT-Folly (= 2021.07.22.00)
     - React-Core/Default
     - React-cxxreact (= 0.71.6)
@@ -164,7 +155,6 @@ PODS:
     - Yoga
   - React-Core/RCTNetworkHeaders (0.71.6):
     - glog
-    - hermes-engine
     - RCT-Folly (= 2021.07.22.00)
     - React-Core/Default
     - React-cxxreact (= 0.71.6)
@@ -175,7 +165,6 @@ PODS:
     - Yoga
   - React-Core/RCTSettingsHeaders (0.71.6):
     - glog
-    - hermes-engine
     - RCT-Folly (= 2021.07.22.00)
     - React-Core/Default
     - React-cxxreact (= 0.71.6)
@@ -186,7 +175,6 @@ PODS:
     - Yoga
   - React-Core/RCTTextHeaders (0.71.6):
     - glog
-    - hermes-engine
     - RCT-Folly (= 2021.07.22.00)
     - React-Core/Default
     - React-cxxreact (= 0.71.6)
@@ -197,7 +185,6 @@ PODS:
     - Yoga
   - React-Core/RCTVibrationHeaders (0.71.6):
     - glog
-    - hermes-engine
     - RCT-Folly (= 2021.07.22.00)
     - React-Core/Default
     - React-cxxreact (= 0.71.6)
@@ -208,7 +195,6 @@ PODS:
     - Yoga
   - React-Core/RCTWebSocket (0.71.6):
     - glog
-    - hermes-engine
     - RCT-Folly (= 2021.07.22.00)
     - React-Core/Default (= 0.71.6)
     - React-cxxreact (= 0.71.6)
@@ -230,7 +216,6 @@ PODS:
     - boost (= 1.76.0)
     - DoubleConversion
     - glog
-    - hermes-engine
     - RCT-Folly (= 2021.07.22.00)
     - React-callinvoker (= 0.71.6)
     - React-jsi (= 0.71.6)
@@ -253,12 +238,10 @@ PODS:
     - boost (= 1.76.0)
     - DoubleConversion
     - glog
-    - hermes-engine
     - RCT-Folly (= 2021.07.22.00)
   - React-jsiexecutor (0.71.6):
     - DoubleConversion
     - glog
-    - hermes-engine
     - RCT-Folly (= 2021.07.22.00)
     - React-cxxreact (= 0.71.6)
     - React-jsi (= 0.71.6)
@@ -337,7 +320,6 @@ PODS:
   - ReactCommon/turbomodule/bridging (0.71.6):
     - DoubleConversion
     - glog
-    - hermes-engine
     - RCT-Folly (= 2021.07.22.00)
     - React-callinvoker (= 0.71.6)
     - React-Core (= 0.71.6)
@@ -348,7 +330,6 @@ PODS:
   - ReactCommon/turbomodule/core (0.71.6):
     - DoubleConversion
     - glog
-    - hermes-engine
     - RCT-Folly (= 2021.07.22.00)
     - React-callinvoker (= 0.71.6)
     - React-Core (= 0.71.6)
@@ -398,8 +379,6 @@ DEPENDENCIES:
   - FBLazyVector (from `../node_modules/react-native/Libraries/FBLazyVector`)
   - FBReactNativeSpec (from `../node_modules/react-native/React/FBReactNativeSpec`)
   - glog (from `../node_modules/react-native/third-party-podspecs/glog.podspec`)
-  - hermes-engine (from `../node_modules/react-native/sdks/hermes-engine/hermes-engine.podspec`)
-  - libevent (~> 2.1.12)
   - RCT-Folly (from `../node_modules/react-native/third-party-podspecs/RCT-Folly.podspec`)
   - RCTRequired (from `../node_modules/react-native/Libraries/RCTRequired`)
   - RCTTypeSafety (from `../node_modules/react-native/Libraries/TypeSafety`)
@@ -410,7 +389,7 @@ DEPENDENCIES:
   - React-Core/RCTWebSocket (from `../node_modules/react-native/`)
   - React-CoreModules (from `../node_modules/react-native/React/CoreModules`)
   - React-cxxreact (from `../node_modules/react-native/ReactCommon/cxxreact`)
-  - React-hermes (from `../node_modules/react-native/ReactCommon/hermes`)
+  - React-jsc (from `../node_modules/react-native/ReactCommon/jsc`)
   - React-jsi (from `../node_modules/react-native/ReactCommon/jsi`)
   - React-jsiexecutor (from `../node_modules/react-native/ReactCommon/jsiexecutor`)
   - React-jsinspector (from `../node_modules/react-native/ReactCommon/jsinspector`)
@@ -438,7 +417,6 @@ DEPENDENCIES:
 SPEC REPOS:
   trunk:
     - fmt
-    - libevent
 
 EXTERNAL SOURCES:
   boost:
@@ -451,8 +429,6 @@ EXTERNAL SOURCES:
     :path: "../node_modules/react-native/React/FBReactNativeSpec"
   glog:
     :podspec: "../node_modules/react-native/third-party-podspecs/glog.podspec"
-  hermes-engine:
-    :podspec: "../node_modules/react-native/sdks/hermes-engine/hermes-engine.podspec"
   RCT-Folly:
     :podspec: "../node_modules/react-native/third-party-podspecs/RCT-Folly.podspec"
   RCTRequired:
@@ -471,8 +447,8 @@ EXTERNAL SOURCES:
     :path: "../node_modules/react-native/React/CoreModules"
   React-cxxreact:
     :path: "../node_modules/react-native/ReactCommon/cxxreact"
-  React-hermes:
-    :path: "../node_modules/react-native/ReactCommon/hermes"
+  React-jsc:
+    :path: "../node_modules/react-native/ReactCommon/jsc"
   React-jsi:
     :path: "../node_modules/react-native/ReactCommon/jsi"
   React-jsiexecutor:
@@ -563,6 +539,6 @@ SPEC CHECKSUMS:
   RNVectorIcons: fcc2f6cb32f5735b586e66d14103a74ce6ad61f8
   Yoga: ba09b6b11e6139e3df8229238aa794205ca6a02a
 
-PODFILE CHECKSUM: 865fea78cb13898b7d0dbd3251cfd81de8a2dbc8
+PODFILE CHECKSUM: 9c02952eaa8b1063bc339920925980bab1ba8fb6
 
 COCOAPODS: 1.12.0
