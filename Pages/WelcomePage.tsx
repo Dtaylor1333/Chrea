@@ -62,7 +62,7 @@ export default function WelcomePage({navigation}: any){
         <Image style = {styles.image1} source={require('../Images/Welcome.jpg')} />
         <Text style = {styles.text1}> Welcome to Chrea</Text>
         <Text style = {styles.text2}> Decide where to spend your {"\n"}time faster. </Text>
-        <TouchableOpacity style={styles.button} onPress={()=> navigation.navigate("Choose Location")}>
+        <TouchableOpacity style={styles.button} onPress={()=> navigation.navigate("Create Account Page")}>
             <Text style={styles.buttonText}>Get Started</Text>
         </TouchableOpacity>
         {/* /* <Button style ={styles.button} title="Learn More"></Button> */}

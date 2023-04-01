@@ -5,7 +5,7 @@ import {StyleSheet, Image, View, ImageBackground, Text, SafeAreaView, StatusBar,
 import DropdownComponent from './DropdownTemplate';
 import FlatButton from './FlatButton';
 import * as RootNavigation from '../RootNavigation';
-import BottomTabs from '../BottomTabs';
+import BottomTabs from './BottomTabs';
 import BestMoves from './BestMoves';
 import { Colors } from 'react-native/Libraries/NewAppScreen';
 import { useNavigation } from '@react-navigation/native';

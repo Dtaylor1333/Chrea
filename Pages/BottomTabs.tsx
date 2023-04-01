@@ -1,8 +1,8 @@
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { NavigationContainer } from '@react-navigation/native';
-import BestMoves from './Pages/BestMoves';
-import FindEvents from './Pages/FindEvents';
-import PlaceSelectPage from './Pages/PlaceSelectPage';
+import BestMoves from './BestMoves';
+import FindEvents from './FindEvents';
+import PlaceSelectPage from './PlaceSelectPage';
 
 
 

@@ -5,7 +5,7 @@ import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
 import Fontisto from 'react-native-vector-icons/Fontisto';
 import Entypo from 'react-native-vector-icons/Entypo';
 import WelcomePage from './WelcomePage';
-import BottomTabs from '../BottomTabs';
+import BottomTabs from './BottomTabs';
 import Ionicons from 'react-native-vector-icons/Ionicons'
 import { useNavigation, useRoute } from '@react-navigation/native';
 import EventDetails from './EventDetails';
