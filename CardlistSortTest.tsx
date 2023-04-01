@@ -1,5 +1,5 @@
 import React, { Component, useEffect, useState } from 'react';
-import { SafeAreaView, Text, View, StyleSheet, Image, TouchableOpacity, RefreshControl, ScrollView} from 'react-native';
+import { SafeAreaView, Text, View, StyleSheet, Image, TouchableOpacity, RefreshControl, ScrollView, Button} from 'react-native';
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
 import Fontisto from 'react-native-vector-icons/Fontisto';
 import Entypo from 'react-native-vector-icons/Entypo';
@@ -73,126 +73,6 @@ export default function CardlistSortTest({navigation, route}){
                 <Text style = {styles.heading2}>Check out the top 4 moves in {'\n'}your area.</Text>
                 
                 
-                 <View>
-                   {/* <View> 
-                        <TouchableOpacity style={styles.cardM} onPress={() => handleUpvote(card.id)}>
-                             <Image style={styles.cardImgM} source={require('/Users/deandretaylor/ChreaApp/Images/Img1.jpg')}></Image> 
-                        <View style={{flexDirection:'row', height: 50}}>   
-                            <Text style = {styles.eventNameM}>Bridger's Westport</Text>
-                            <View>
-                                <Text style={styles.attendanceM}>{card.upvotes}</Text>
-                                <Text style={styles.attendanceMP}>People attending</Text>
-                                    <View style={{flexDirection: 'row', marginLeft: 25}}>
-                                         <Image style={styles.profilesM} source={require('/Images/Headshot1.jpg')}></Image>
-                                        <Image style={styles.profilesM} source={require('/Images/Headshot2.jpg')}></Image>
-                                        <Image style={styles.profilesM} source={require('/Images/Headshot3.jpg')}></Image>
-                                        <Image style={styles.profilesM} source={require('/Images/Headshot4.jpg')}></Image>
-                                        <Image style={styles.profilesM} source={require('/Images/Headshot5.jpg')}></Image>
-                                        <Image style={styles.profilesM} source={require('/Images/Headshot6.jpg')}></Image>
-                                        <Text style={styles.plusM}>+</Text>
-                                    </View>
-                            </View>
-                        </View>
-                            <Text style={styles.catagoryM}>Club/Bar</Text>
-                            <Text style={styles.timeM}>8PM-1:30AM </Text>
-                                <View style={{flexDirection: 'row'}}>
-                                     <Image style={styles.promoterImgM} source={require('./Images/Headshot1.jpg')}></Image> 
-                                    <Text style={styles.promoterNameM}>Promoted by Emmanuel K.</Text>
-                                </View>
-                        </TouchableOpacity>
-                    </View>
-                   
-
-                    <View>
-                    
-                        <TouchableOpacity style={styles.card} onPress={() => handleUpvote(card.id)}>
-                             <Image style={styles.cardImg}
-                                source={require('/Users/deandretaylor/ChreaApp/Images/Img2.jpg')}></Image> 
-                        <View style={{flexDirection:'row', height: 50}}>
-                            <Text style = {styles.eventName}>Westport Ale House</Text>
-                            <View>
-                                <Text style={styles.attendance}></Text>
-                                <Text style={styles.attendanceP}>People attending</Text>
-                                    <View style={{flexDirection: 'row', marginLeft: 30}}>
-                                         <Image style={styles.profiles} source={require('./Images/Headshot1.jpg')}></Image>
-                                        <Image style={styles.profiles} source={require('./Images/Headshot2.jpg')}></Image>
-                                        <Image style={styles.profiles} source={require('./Images/Headshot3.jpg')}></Image>
-                                        <Image style={styles.profiles} source={require('./Images/Headshot4.jpg')}></Image>
-                                        <Image style={styles.profiles} source={require('./Images/Headshot5.jpg')}></Image>
-                                        <Image style={styles.profiles} source={require('./Images/Headshot6.jpg')}></Image>
-                                        <Text style={styles.plus}>+</Text>
-                                    </View>
-                            </View>
-                        </View>
-                            <Text style={styles.catagory}>Bar</Text>
-                            <Text style={styles.time}>4PM-11PM</Text>
-                                <View style={{flexDirection: 'row'}}>
-                                     <Image style={styles.promoterImg} source={require('/Images/Headshot5.jpg')}></Image>
-                                    <Text style={styles.promoterName}>Promoted by Jammi G. </Text>
-                                </View>
-                        </TouchableOpacity>
-                       
-                    </View>
-
-                    <View>
-                        <TouchableOpacity style={styles.card} onPress={() => handleUpvote(card.id)}>
-                             <Image style={styles.cardImg}
-                            source={require('/Users/deandretaylor/ChreaApp/Images/Img3.jpg')}></Image> 
-                        <View style={{flexDirection:'row', height: 50}}>
-                            <Text style = {styles.eventName}>The Levee Westport</Text>
-                            <View>
-                                <Text style={styles.attendance}></Text>
-                                <Text style={styles.attendanceP}>People attending</Text>
-                                    <View style={{flexDirection: 'row', marginLeft: 30}}>
-                                         <Image style={styles.profiles} source={require('./Images/Headshot1.jpg')}></Image>
-                                        <Image style={styles.profiles} source={require('./Images/Headshot2.jpg')}></Image>
-                                        <Image style={styles.profiles} source={require('./Images/Headshot3.jpg')}></Image>
-                                        <Image style={styles.profiles} source={require('./Images/Headshot4.jpg')}></Image>
-                                        <Image style={styles.profiles} source={require('./Images/Headshot5.jpg')}></Image>
-                                        <Image style={styles.profiles} source={require('./Images/Headshot6.jpg')}></Image>
-                                        <Text style={styles.plus}>+</Text> 
-                                    </View>
-                            </View>
-                        </View>
-                            <Text style={styles.catagory}>Bar & Resturant</Text>
-                            <Text style={styles.time}>4PM-3AM</Text>
-                                <View style={{flexDirection: 'row'}}>
-                                     <Image style={styles.promoterImg} source={require('../Images/Headshot4.jpg')}></Image> 
-                                    <Text style={styles.promoterName}>Promoted by James K.</Text>
-                                </View>
-                        </TouchableOpacity>
-                    </View>
-
-                    <View>
-                        <TouchableOpacity style={styles.card} onPress={() => handleUpvote(card.id)}>
-                             <Image style={styles.cardImg}
-                                source={require('/Users/deandretaylor/ChreaApp/Images/Img4.jpg')}></Image> 
-                            <View style={{flexDirection:'row', height: 50}}>
-                                <Text style = {styles.eventName}>Power & Light District</Text>
-                                <View>
-                                <Text style={styles.attendance}></Text>
-                                <Text style={styles.attendanceP}>People attending</Text>
-                                    <View style={{flexDirection: 'row', marginLeft: 30}}>
-                                         <Image style={styles.profiles} source={require('/Images/Headshot1.jpg')}></Image>
-                                        <Image style={styles.profiles} source={require('/Images/Headshot2.jpg')}></Image>
-                                        <Image style={styles.profiles} source={require('/Images/Headshot3.jpg')}></Image>
-                                        <Image style={styles.profiles} source={require('/Images/Headshot4.jpg')}></Image>
-                                        <Image style={styles.profiles} source={require('/Images/Headshot5.jpg')}></Image>
-                                        <Image style={styles.profiles} source={require('/Images/Headshot6.jpg')}></Image>
-                                        <Text style={styles.plus}>+</Text> 
-                                    </View>
-                                </View>
-                            </View>
-                            <Text style={styles.catagory}>Plaza</Text>
-                            <Text style={styles.time}>12AM-12AM</Text>
-                                <View style={{flexDirection: 'row'}}>
-                                     <Image style={styles.promoterImg} source={require('../Images/Headshot2.jpg')}></Image> 
-                                    <Text style={styles.promoterName}>Promoted by Power & Light.</Text>
-                                </View>
-                        </TouchableOpacity>
-                    </View>  */}
-                </View> 
-
                 <View style={styles.container1}>
                     <FlatList
                         data={data}
@@ -200,7 +80,7 @@ export default function CardlistSortTest({navigation, route}){
                         keyExtractor={keyExtractor}
                     />
                 </View>
-
+                
             </ScrollView>
         </SafeAreaView>
     )
@@ -236,11 +116,17 @@ export default function CardlistSortTest({navigation, route}){
                         <Text style={styles.promoterName}>Promoted by {promoterName}</Text>
                     </View>
             </TouchableOpacity>
+            
           </View>
     );
   }
 
 const styles = StyleSheet.create({
+    upvoteButton: {
+        backgroundColor: 'red',
+        padding: 20,
+        width: 200,
+    },
     container1: {
         flex:1,
         flexDirection: 'column',
