@@ -14,6 +14,10 @@ import StackNavigator from './StackNavigator';
 import EventDetails4 from './Pages/EventDetails4';
 import EventDetails3 from './Pages/EventDetails3';
 import EventDetails2 from './Pages/EventDetails2';
+import ListOrderTest from './ListOrderTest';
+import CardlistSortTest from './CardlistSortTest';
+import AnotherTest from './AnotherTest';
+import AnotherTest2 from './AnotherTest2';
 
 
 
@@ -32,7 +36,7 @@ export default function App () {
         {/* <Dashboard /> */}
         {/* <MoreDetails /> */}
 
-        <Stack.Navigator screenOptions={{headerShown: false}}>
+        {/* <Stack.Navigator screenOptions={{headerShown: false}}>
           <Stack.Screen name = "Welcome Page" component= {WelcomePage}/>
           <Stack.Screen name = "Choose Location" component= {PlaceSelectPage}/>
           <Stack.Screen name = "Best Moves" component= {BestMoves}/>
@@ -40,7 +44,10 @@ export default function App () {
           <Stack.Screen name = "Event Details2" component= {EventDetails2}/>
           <Stack.Screen name = "Event Details3" component= {EventDetails3}/>
           <Stack.Screen name = "Event Details4" component= {EventDetails4}/>
-        </Stack.Navigator>
+        </Stack.Navigator> */}
+        {/* <ListOrderTest /> */}
+        <CardlistSortTest navigation={undefined} route={undefined} />
+        {/* <AnotherTest /> */}
         
         {/* <Test /> */}
         {/* ----------------------------WORKING PAGES---------------------- */}
