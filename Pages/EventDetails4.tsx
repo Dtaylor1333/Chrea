@@ -89,7 +89,7 @@ export default function EventDetails4({navigation}) {
         {/* <Ionicons style={styles.backB} name="arrow-back-outline" onPress={() => props.navigation.navigate("Best Moves")(upVote)}/> */}
         <Ionicons style={styles.backB} name="arrow-back-outline" onPress={goback}/>
         </View>
-        <Image style={styles.flyerImg} source={require('/Users/deandretaylor/ChreaApp/Images/Img4.jpg')}></Image>
+        <Image style={styles.flyerImg} source={require('../Images/Img4.jpg')}></Image>
         <View style={{flexDirection:'row'}}>
             <View>
                 <Text style={styles.heading}>Power & Light District </Text>

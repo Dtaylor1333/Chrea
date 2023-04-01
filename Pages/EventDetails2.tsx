@@ -88,7 +88,7 @@ export default function EventDetails2({navigation}) {
         <View>
         <Ionicons style={styles.backB} name="arrow-back-outline" onPress={goback}/>
         </View>
-        <Image style={styles.flyerImg} source={require('/Users/deandretaylor/ChreaApp/Images/Img2.jpg')}></Image>
+        <Image style={styles.flyerImg} source={require('../Images/Img2.jpg')}></Image>
         <View style={{flexDirection:'row'}}>
             <View>
                 <Text style={styles.heading}>Westport Ale House</Text>

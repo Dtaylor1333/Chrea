@@ -1,5 +1,5 @@
 import React, { Component, useState, useEffect, useCallback, useMemo } from 'react'
-import { Button, ScrollView, TouchableOpacity, useColorScheme } from 'react-native';
+import { Button, FlatList, ScrollView, TouchableOpacity, useColorScheme } from 'react-native';
 import { StatusBar } from 'react-native';
 import { Image, StyleSheet, Text, View, Linking, RefreshControl, Alert } from 'react-native'
 import { SafeAreaView } from 'react-native-safe-area-context'
@@ -8,15 +8,14 @@ import Ionicons from 'react-native-vector-icons/Ionicons';
 import { useNavigation } from '@react-navigation/native';
 
 
-export default function EventDetails({navigation, route}) {
+export default function EventDetails({navigation, route }) {
+
+    const { event } = route.params
     const isDarkMode = useColorScheme() === 'dark';
     const backgroundStyle = {backgroundColor: isDarkMode ? Colors.darker : Colors.lighter, };
     const[votes, setVotes] = useState(0);
     const [changeColor, setChangeColor]= useState(0);
     const [refreshing, setRefreshing] = React.useState(false);
-    // const navigation = useNavigation();
-    const [tempList, setTempList] = useState([]);
-
 
     const submit = () => {
         navigation.navigate({
@@ -25,25 +24,6 @@ export default function EventDetails({navigation, route}) {
             merge: true,
         });
     }
-
-    useEffect(()=>{
-        fetch('https://chrea-c1752-default-rtdb.firebaseio.com/kclocations')
-        .then(res => res.json())
-        .then(json => console.log(json))
-    }, [])
-
-
-    // function upVote(){
-    //     if(votes !== 1) {
-    //     setVotes(votes + 1);
-    //     }
-    // }   
-
-    const upVote = () => {
-        if (votes !==1){
-            setVotes(votes + 1);
-        }
-    };
 
     const createTwoButtonAlert = () =>
     Alert.alert('Success', 'Vote has been counted', [
@@ -91,6 +71,7 @@ export default function EventDetails({navigation, route}) {
         setChangeColor(changeColor)
     }
 
+
     const onRefresh = React.useCallback(() => {
         setRefreshing(true);
         setTimeout(() => {
@@ -104,6 +85,7 @@ export default function EventDetails({navigation, route}) {
 
     return (
     <SafeAreaView>
+    
         <StatusBar
             barStyle={isDarkMode ? 'light-content' : 'dark-content'}
             backgroundColor={backgroundStyle.backgroundColor}/>
@@ -114,12 +96,12 @@ export default function EventDetails({navigation, route}) {
         {/* <Ionicons style={styles.backB} name="arrow-back-outline" onPress={() => props.navigation.navigate("Best Moves")(upVote)}/> */}
         <Ionicons style={styles.backB} name="arrow-back-outline" onPress={goback}/>
         </View>
-        <Image style={styles.flyerImg} source={require('/Users/deandretaylor/ChreaApp/Images/Img1.jpg')}></Image>
+        <Image style={styles.flyerImg} source={{uri: `http://ec2-3-84-42-180.compute-1.amazonaws.com/Images/${event.event_flyer}`}}></Image>
         <View style={{flexDirection:'row'}}>
             <View>
-                <Text style={styles.heading}>Bridger's Westport </Text>
-                <Text style={styles.address}>504 Westport Rd. Kansas City, MO 64111</Text>
-                <Text style={styles.details}>March 23 | CLOSED | Ages: 21+ | Venue</Text>
+                <Text style={styles.heading}>{event.event_name}</Text>
+                <Text style={styles.address}>{event.location}</Text>
+                <Text style={styles.details}>{event.date} | CLOSED | Ages: {event.ages} | Venue</Text>
             </View>
             <View style={{width: 122}}>
                 <Text style={styles.heading2}>Cover Charge</Text>
@@ -129,15 +111,15 @@ export default function EventDetails({navigation, route}) {
             </View>
         </View>
         <View style={{flexDirection: 'row'}}>
-            <Image style={styles.promoterImgM} source={require('../Images/Headshot1.jpg')}></Image>
-            <Text style={styles.promoterNameM}>Promoted by James K.</Text>
+            <Image style={styles.promoterImgM} source={{uri: `http://ec2-3-84-42-180.compute-1.amazonaws.com/Images/${event.promoter_image}`}}></Image>
+            <Text style={styles.promoterNameM}>Promoted by {event.promoter}</Text>
         </View>
         <View>
             <Text style={styles.planQues}>Sound like a plan?</Text>
             {/* <Text>{votes}</Text> */} 
             <View style ={{flexDirection: 'row', alignSelf: 'center'}}>
                 <TouchableOpacity 
-                onPress={()=>{upVote(); createTwoButtonAlert() }} 
+                onPress={()=>{ createTwoButtonAlert() }} 
                 disabled={votes === 1}
                 style={styles.button2}>
                     <View >
