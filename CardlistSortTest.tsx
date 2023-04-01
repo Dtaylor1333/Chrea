@@ -23,6 +23,7 @@ export default function CardlistSortTest({navigation, route}){
     }, []);
 
 
+    // const [data, setData] = useState(jsonfile);
     const [data, setData] = useState([
         { title: 'Friday Night Lights', description: 'Bridgers', upvotes: 3, time: '6AM-12AM', category: 'Club', promoter: 'Jammie G.', source: require('/Users/deandretaylor/ChreaApp/Images/Welcome.jpg')},
         { title: 'College Night', description: 'Ale House', upvotes: 1, time: '2AM-1AM', category: 'Bar', promoter: 'Scott F.', source: require('/Users/deandretaylor/ChreaApp/Images/Img3.jpg')},
