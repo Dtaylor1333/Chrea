@@ -29,6 +29,7 @@
 		B7D07E8D29D4C17300A9956D /* EvilIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B7D07E7D29D4C17300A9956D /* EvilIcons.ttf */; };
 		B7D07E8E29D4C17300A9956D /* SimpleLineIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B7D07E7E29D4C17300A9956D /* SimpleLineIcons.ttf */; };
 		B7D07E8F29D4C17300A9956D /* MaterialIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B7D07E7F29D4C17300A9956D /* MaterialIcons.ttf */; };
+		CC2E9AAD29D8EA0F001E738A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CC2E9AAC29D8EA0F001E738A /* GoogleService-Info.plist */; };
 		F7C9A44D055444A555C2A5D3 /* Pods_ChreaApp_ChreaAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A267A97F65200A7BC2BA61B8 /* Pods_ChreaApp_ChreaAppTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -75,6 +76,7 @@
 		B7D07E7D29D4C17300A9956D /* EvilIcons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = EvilIcons.ttf; sourceTree = "<group>"; };
 		B7D07E7E29D4C17300A9956D /* SimpleLineIcons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = SimpleLineIcons.ttf; sourceTree = "<group>"; };
 		B7D07E7F29D4C17300A9956D /* MaterialIcons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = MaterialIcons.ttf; sourceTree = "<group>"; };
+		CC2E9AAC29D8EA0F001E738A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "ChreaApp/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -118,6 +120,7 @@
 		13B07FAE1A68108700A75B9A /* ChreaApp */ = {
 			isa = PBXGroup;
 			children = (
+				CC2E9AAC29D8EA0F001E738A /* GoogleService-Info.plist */,
 				B7D07E6F29D4C17300A9956D /* Fonts */,
 				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
 				13B07FB01A68108700A75B9A /* AppDelegate.mm */,
@@ -308,6 +311,7 @@
 				B7D07E8C29D4C17300A9956D /* Zocial.ttf in Resources */,
 				B7D07E8E29D4C17300A9956D /* SimpleLineIcons.ttf in Resources */,
 				B7D07E8229D4C17300A9956D /* Feather.ttf in Resources */,
+				CC2E9AAD29D8EA0F001E738A /* GoogleService-Info.plist in Resources */,
 				B7D07E8129D4C17300A9956D /* Octicons.ttf in Resources */,
 				B7D07E8429D4C17300A9956D /* FontAwesome5_Brands.ttf in Resources */,
 				B7D07E8629D4C17300A9956D /* AntDesign.ttf in Resources */,

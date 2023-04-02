@@ -6,16 +6,61 @@ import { SafeAreaView } from 'react-native-safe-area-context'
 import { Colors } from 'react-native/Libraries/NewAppScreen';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import { useNavigation } from '@react-navigation/native';
+import { getDatabase, ref, runTransaction, get, child} from "firebase/database";
+import { getAuth } from "firebase/auth";
 
 
 export default function EventDetails({navigation, route }) {
 
+    const auth = getAuth();
+    const user = auth.currentUser;
     const { event } = route.params
     const isDarkMode = useColorScheme() === 'dark';
     const backgroundStyle = {backgroundColor: isDarkMode ? Colors.darker : Colors.lighter, };
     const[votes, setVotes] = useState(0);
     const [changeColor, setChangeColor]= useState(0);
     const [refreshing, setRefreshing] = React.useState(false);
+
+    function addVote(uid) {
+        const db = getDatabase();
+        const eventRef = ref(db, "events/Kansas City, MO/0");
+
+        runTransaction(eventRef, (post) => {
+          if (post) {
+            if (post.usersVoted && !post.usersVoted[uid]) {
+              post.votes++;
+              post.usersVoted[uid] = true;
+            } else {
+              if (!post.usersVoted) {
+                post.usersVoted = {};
+              }
+              if (!post.usersVoted[uid]) {
+                post.votes++;
+              }  
+              post.usersVoted[uid] = true;
+            }
+          }
+          return post;
+        });
+
+        createTwoButtonAlert();
+    }
+
+    function remoteVote(uid) {
+        const db = getDatabase();
+        const eventRef = ref(db, "events/Kansas City, MO/0");
+      
+        runTransaction(eventRef, (post) => {
+          if (post) {
+            if (post.usersVoted && post.usersVoted[uid]) {
+              post.votes--;
+              post.usersVoted[uid] = false;
+            } 
+          }
+          return post;
+        });
+    }
+
 
     const submit = () => {
         navigation.navigate({
@@ -37,14 +82,6 @@ export default function EventDetails({navigation, route }) {
     //         merge: true,
     //     })
     //  }
-
-    const goback = useCallback(() => {
-        navigation.navigate({
-            name: "Best Moves",
-            params: {votes: votes},
-            merge: true,
-                })
-    }, [votes])
 
     //  function downVote(){
     //     if(votes ===1){
@@ -80,9 +117,6 @@ export default function EventDetails({navigation, route }) {
     }, []);
 
     
-
-
-
     return (
     <SafeAreaView>
     
@@ -94,7 +128,7 @@ export default function EventDetails({navigation, route }) {
       <View>
         <View>
         {/* <Ionicons style={styles.backB} name="arrow-back-outline" onPress={() => props.navigation.navigate("Best Moves")(upVote)}/> */}
-        <Ionicons style={styles.backB} name="arrow-back-outline" onPress={goback}/>
+        <Ionicons style={styles.backB} name="arrow-back-outline" onPress={() => navigation.goBack()}/>
         </View>
         <Image style={styles.flyerImg} source={{uri: `http://ec2-3-84-42-180.compute-1.amazonaws.com/Images/${event.event_flyer}`}}></Image>
         <View style={{flexDirection:'row'}}>
@@ -119,16 +153,14 @@ export default function EventDetails({navigation, route }) {
             {/* <Text>{votes}</Text> */} 
             <View style ={{flexDirection: 'row', alignSelf: 'center'}}>
                 <TouchableOpacity 
-                onPress={()=>{ createTwoButtonAlert() }} 
-                disabled={votes === 1}
+                onPress={()=>{ addVote(user?.uid) }} 
                 style={styles.button2}>
                     <View >
                         <Text style = {styles.buttonText2} >Going</Text>
                     </View>
                 </TouchableOpacity>
                 <TouchableOpacity 
-                onPress={() => {downVote(); submit}}
-                disabled={votes === 0}>
+                onPress={() => {remoteVote(user?.uid)}}>
                     <View style = {styles.button2} >
                         <Text style = {styles.buttonText2} >Not Going</Text>
                     </View>

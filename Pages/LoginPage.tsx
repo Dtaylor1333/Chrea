@@ -2,7 +2,7 @@ import React from 'react';
 import {StyleSheet, Image, View, ImageBackground, Text, SafeAreaView, StatusBar, useColorScheme, Touchable, TouchableOpacity, TextInput} from 'react-native';
 import { Colors } from 'react-native/Libraries/NewAppScreen';
 import { useNavigation } from '@react-navigation/native';
-
+import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
 
 
 export default function LoginPage({navigation, route}){
@@ -20,25 +20,27 @@ export default function LoginPage({navigation, route}){
         backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
     };
   
+    const auth = getAuth();
 
-const handleLogin = () => {
-    if (password.length < 5) {
-      setPasswordError('Password must be at least 5 characters long');
-    } else {
-      setPasswordError('');
-    }
+    const handleLogin = () => {
 
-    if (confirmPassword !== password) {
-      setConfirmPasswordError('Passwords do not match');
-    } else {
-      setConfirmPasswordError('');
-    }
+        if (username.length >= 5 && password.length >= 5) {
+        // Perform login logic here
+        console.log(`Username: ${username}, Password: ${password}`);
+        signInWithEmailAndPassword(auth, username, password)
+            .then((userCredential) => {
+                // Signed in 
+                const user = userCredential.user;
+                navigation.navigate("Choose Location", user)
+            })
+            .catch((error) => {
+                const errorCode = error.code;
+                const errorMessage = error.message;
+                console.log(errorMessage);
 
-    if (password.length >= 5 && confirmPassword === password) {
-      // Perform login logic here
-      console.log(`Username: ${username}, Password: ${password}`);
-    }
-  };
+            });   
+        }
+    };
 
 
     return(
@@ -55,24 +57,26 @@ const handleLogin = () => {
             <TextInput
                 style={styles.input}
                 onChangeText={setUsername}
+                autoCapitalize='none'
                 value={username}
                 placeholder="username"
-                maxLength={5}
+                maxLength={25}
             />
             <Text style={styles.inputTitle}>Password:</Text>
             <TextInput
                 style={styles.input}
                 onChangeText={setPassword}
+                autoCapitalize='none'
                 value={password}
                 placeholder="password"
                 secureTextEntry={true}
-                maxLength={5}
+                maxLength={25}
             />
                 {/* <DropdownComponent /> */}
             
             <View style={styles.container2}>
                 <View>
-                <TouchableOpacity onPress={()=> navigation.navigate("Choose Location")}>
+                <TouchableOpacity onPress={()=> handleLogin()}>
                     <View style = {styles.button2}>
                         <Text style = {styles.buttonText3}> Confirm</Text>
                     </View>

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import {StyleSheet, Image, View, ImageBackground, Text, SafeAreaView, StatusBar, useColorScheme, Touchable, TouchableOpacity, TextInput} from 'react-native';
 import DropdownComponent from './DropdownTemplate';
 import FlatButton from './FlatButton';
@@ -8,7 +8,7 @@ import BestMoves from './BestMoves';
 import { Colors } from 'react-native/Libraries/NewAppScreen';
 import { useNavigation } from '@react-navigation/native';
 import { Button } from 'react-native';
-
+import firebase from '../src/firebase/config';
 
 
 export default function CreateAccount({navigation, route}){
@@ -19,13 +19,15 @@ export default function CreateAccount({navigation, route}){
     const [passwordError, setPasswordError] = React.useState('');
     const [confirmPassword, setConfirmPassword] = React.useState('');
     const [confirmPasswordError, setConfirmPasswordError] = React.useState('');
+    const [isLoading, setLoading] = useState(false);
+    const [responseOk, setResponse] = useState(false);
 
     const backgroundStyle = {
     backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
 };
 
 const handleLogin = () => {
-    if (password.length < 5) {
+    if (password.length < 6) {
       setPasswordError('Password must be at least 5 characters long');
     } else {
       setPasswordError('');
@@ -37,12 +39,45 @@ const handleLogin = () => {
       setConfirmPasswordError('');
     }
 
-    if (password.length >= 5 && confirmPassword === password) {
+    if (password.length >= 6 && confirmPassword === password) {
       // Perform login logic here
       console.log(`username: ${username}, Password: ${password}`);
+      setLoading(true);
     }
   };
 
+  useEffect(() => {
+    firebase
+        .auth()
+        .createUserWithEmailAndPassword(username, password)
+        .then((response: any) => {
+            const uid = response.user.uid
+            const data = {
+                id: uid,
+                username,
+            };
+            const usersRef = firebase.firestore().collection('users')
+            usersRef
+                .doc(uid)
+                .set(data)
+                .then(() => {
+                    setResponse(true);
+                })
+                .catch((error: any) => {
+                    setPasswordError(error)
+                    setLoading(false)
+                })
+                .then(
+                    navigation.navigate("Login Page")
+                );
+        })
+        .catch((error: any) => {
+            console.log(error)
+            setLoading(false)
+        });
+  }, [isLoading])
+
+    
     return(
 
     <ImageBackground style = {styles.backgroundImg} source = {require('../Images/LoadingPageBackground.png')}> 
@@ -58,37 +93,40 @@ const handleLogin = () => {
             <TextInput
                 style={styles.input}
                 onChangeText={setUsername}
+                autoCapitalize='none'
                 value={username}
                 placeholder="username"
-                maxLength={5}
+                maxLength={25}
             />
             <Text style={styles.inputTitle}>Password: (5 characters)</Text>
             <TextInput
                 style={styles.input}
+                autoCapitalize='none'
                 onChangeText={setPassword}
                 value={password}
                 placeholder="password"
                 secureTextEntry={true}
-                maxLength={5}
+                maxLength={25}
             />
             {passwordError ? <Text>{passwordError}</Text> : null}
             <Text style={styles.inputTitle}>Confirm Password</Text>
             <TextInput
                 style={styles.input}
+                autoCapitalize='none'
                 onChangeText={setConfirmPassword}
                 value={confirmPassword}
                 placeholder="password"
                 secureTextEntry={true}
-                maxLength={5}
+                maxLength={25}
             />
             {confirmPasswordError ? <Text>{confirmPasswordError}</Text> : null} 
             {passwordError ? <Text>{passwordError}</Text> : null}
             <Button title="Already have an account" onPress={() => navigation.navigate("Login Page")}/>
             <View style={styles.container2}>
                 <View>
-                <TouchableOpacity onPress={handleLogin}>
+                <TouchableOpacity onPress={handleLogin} disabled={isLoading}>
                     <View style = {styles.button2}>
-                        <Text style = {styles.buttonText3}> Confirm</Text>
+                        <Text style = {styles.buttonText3}> Create</Text>
                     </View>
                 </TouchableOpacity>
                 </View>
