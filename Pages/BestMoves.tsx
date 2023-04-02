@@ -151,7 +151,7 @@ import eventCardStyles from '../styles/eventCardStyles copy';
 
 export default function BestMoves({navigation, route}){
 
-    const { location } = route.params
+    const { location, user } = route.params
     const [refreshing, setRefreshing] = React.useState(false);
     const [isLoading, setLoading] = useState(true);
     const [data, setData] = useState<Event[]>([]);
@@ -204,7 +204,7 @@ export default function BestMoves({navigation, route}){
             <Text style = {styles.heading1}>Best Moves </Text>
             <Text style = {styles.heading2}>Check out the top 4 moves in {'\n'}your area.</Text>
         <View>
-            {data.map((event, index) => <EventCard event={event} navigation={navigation} route={route} eventCardStyles={index == 0 ? eventCardStylesM : eventCardStyles}></EventCard>)}
+            {data.map((event, index) => <EventCard user={user} event={event} navigation={navigation} route={route} eventCardStyles={index == 0 ? eventCardStylesM : eventCardStyles}></EventCard>)}
         </View>
         </ScrollView>
         </SafeAreaView>

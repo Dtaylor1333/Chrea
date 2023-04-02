@@ -45,7 +45,7 @@ export default function PlaceSelectPage({navigation, route}){
     // const navigation = useNavigation();
     // const Tab = createBottomTabNavigator();
 
-    
+    const { user } = route.params
     const isDarkMode = useColorScheme() === 'dark';
     const [isFocus, setIsFocus] = useState(false);
     const [location, setLocation] = useState("Pick");
@@ -120,7 +120,7 @@ export default function PlaceSelectPage({navigation, route}){
                 <View>
                     <View style={buttonStyles.container2}>
                         <View>
-                        <TouchableOpacity onPress={()=> navigation.navigate("Best Moves", { location: location})}>
+                        <TouchableOpacity onPress={()=> navigation.navigate("Best Moves", { location: location, user: user})}>
                             <View style = {buttonStyles.button2}>
                                 <Text style = {buttonStyles.buttonText3}> Confirm</Text>
                             </View>
