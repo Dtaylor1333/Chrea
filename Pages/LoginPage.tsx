@@ -78,7 +78,7 @@ export default function LoginPage({navigation, route}){
                 <View>
                 <TouchableOpacity onPress={()=> handleLogin()}>
                     <View style = {styles.button2}>
-                        <Text style = {styles.buttonText3}>Confirm</Text>
+                        <Text style = {styles.buttonText3}> Confirm</Text>
                     </View>
                 </TouchableOpacity>
                 </View>
@@ -86,7 +86,7 @@ export default function LoginPage({navigation, route}){
                 <View>
                 <TouchableOpacity>
                     <View style = {styles.button3}>
-                        <Text style = {styles.buttonText4}>Cancel</Text>
+                        <Text style = {styles.buttonText4}> Cancel</Text>
                     </View>
                 </TouchableOpacity>
                 </View>
