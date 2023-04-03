@@ -10,7 +10,7 @@ export default function LoginPage({navigation, route}){
 
     const isDarkMode = useColorScheme() === 'dark';
     
-    const [username, setUsername] = React.useState('');
+    const [email, setEmail] = React.useState('');
     const [password, setPassword] = React.useState('');
     const [passwordError, setPasswordError] = React.useState('');
     const [confirmPassword, setConfirmPassword] = React.useState('');
@@ -53,13 +53,13 @@ export default function LoginPage({navigation, route}){
             <Text style = {styles.text1}>Log in to your account</Text>
         </View>
         <View style={styles.container2}>
-            <Text style={styles.inputTitle}>Username:</Text>
+            <Text style={styles.inputTitle}>Email:</Text>
             <TextInput
                 style={styles.input}
-                onChangeText={setUsername}
+                onChangeText={setEmail}
                 autoCapitalize='none'
-                value={username}
-                placeholder="username"
+                value={email}
+                placeholder="Email address"
                 maxLength={25}
             />
             <Text style={styles.inputTitle}>Password:</Text>
