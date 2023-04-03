@@ -96,7 +96,7 @@ const handleLogin = () => {
                 onChangeText={setEmail}
                 autoCapitalize='none'
                 value={email}
-                placeholder="Email Address"
+                placeholder="Email address"
                 maxLength={25}
             />
             <Text style={styles.inputTitle}>Password: (5 characters)</Text>
