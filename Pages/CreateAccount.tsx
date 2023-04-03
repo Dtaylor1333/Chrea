@@ -73,7 +73,7 @@ const handleLogin = () => {
         })
         .catch((error: any) => {
             console.log(error)
-            setPassword(error)
+            setPasswordError(error)
             setLoading(false)
         });
   }, [isLoading])
