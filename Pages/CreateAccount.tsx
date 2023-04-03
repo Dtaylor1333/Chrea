@@ -14,7 +14,7 @@ import firebase from '../src/firebase/config';
 export default function CreateAccount({navigation, route}){
 
     const isDarkMode = useColorScheme() === 'dark';
-    const [username, setUsername] = React.useState('');
+    const [email, setEmail] = React.useState('');
     const [password, setPassword] = React.useState('');
     const [passwordError, setPasswordError] = React.useState('');
     const [confirmPassword, setConfirmPassword] = React.useState('');
@@ -41,7 +41,7 @@ const handleLogin = () => {
 
     if (password.length >= 6 && confirmPassword === password) {
       // Perform login logic here
-      console.log(`username: ${username}, Password: ${password}`);
+      console.log(`email: ${email}, Password: ${password}`);
       setLoading(true);
     }
   };
@@ -73,6 +73,7 @@ const handleLogin = () => {
         })
         .catch((error: any) => {
             console.log(error)
+            setPassword(error)
             setLoading(false)
         });
   }, [isLoading])
@@ -92,10 +93,10 @@ const handleLogin = () => {
             <Text style={styles.inputTitle}>Username: (5 characters)</Text>
             <TextInput
                 style={styles.input}
-                onChangeText={setUsername}
+                onChangeText={setEmail}
                 autoCapitalize='none'
-                value={username}
-                placeholder="username"
+                value={email}
+                placeholder="Email Address"
                 maxLength={25}
             />
             <Text style={styles.inputTitle}>Password: (5 characters)</Text>
