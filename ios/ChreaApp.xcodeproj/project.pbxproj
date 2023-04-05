@@ -7,35 +7,28 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		00E356F31AD99517003FC87E /* ChreaAppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* ChreaAppTests.m */; };
-		0930B73FF1C97CE95005E401 /* Pods_ChreaApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A21E8E1EC6C7E2E310FC2556 /* Pods_ChreaApp.framework */; };
+		0930B73FF1C97CE95005E401 /* BuildFile in Frameworks */ = {isa = PBXBuildFile; };
 		13B07FBC1A68108700A75B9A /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.mm */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
-		5DC01776329E02039CD83130 /* Pods_ChreaApp_ChreaAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E40F30A6956530154A932D27 /* Pods_ChreaApp_ChreaAppTests.framework */; };
+		220B059C13374B01A4C7D117 /* Pods_ChreaApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F68E1D4E0352A903D7A8816 /* Pods_ChreaApp.framework */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
-		B7D07E8029D4C17300A9956D /* Fontisto.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B7D07E7029D4C17300A9956D /* Fontisto.ttf */; };
+		B5FE3AF936C59AE8ACA550FD /* Pods_ChreaApp_ChreaAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01D39D4DB10297F92757699D /* Pods_ChreaApp_ChreaAppTests.framework */; };
 		B7D07E8129D4C17300A9956D /* Octicons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B7D07E7129D4C17300A9956D /* Octicons.ttf */; };
 		B7D07E8229D4C17300A9956D /* Feather.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B7D07E7229D4C17300A9956D /* Feather.ttf */; };
-		B7D07E8329D4C17300A9956D /* Entypo.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B7D07E7329D4C17300A9956D /* Entypo.ttf */; };
 		B7D07E8429D4C17300A9956D /* FontAwesome5_Brands.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B7D07E7429D4C17300A9956D /* FontAwesome5_Brands.ttf */; };
 		B7D07E8529D4C17300A9956D /* MaterialCommunityIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B7D07E7529D4C17300A9956D /* MaterialCommunityIcons.ttf */; };
 		B7D07E8629D4C17300A9956D /* AntDesign.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B7D07E7629D4C17300A9956D /* AntDesign.ttf */; };
-		B7D07E8729D4C17300A9956D /* Foundation.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B7D07E7729D4C17300A9956D /* Foundation.ttf */; };
-		B7D07E8829D4C17300A9956D /* Ionicons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B7D07E7829D4C17300A9956D /* Ionicons.ttf */; };
 		B7D07E8929D4C17300A9956D /* FontAwesome5_Solid.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B7D07E7929D4C17300A9956D /* FontAwesome5_Solid.ttf */; };
-		B7D07E8A29D4C17300A9956D /* FontAwesome5_Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B7D07E7A29D4C17300A9956D /* FontAwesome5_Regular.ttf */; };
-		B7D07E8B29D4C17300A9956D /* FontAwesome.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B7D07E7B29D4C17300A9956D /* FontAwesome.ttf */; };
 		B7D07E8C29D4C17300A9956D /* Zocial.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B7D07E7C29D4C17300A9956D /* Zocial.ttf */; };
-		B7D07E8D29D4C17300A9956D /* EvilIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B7D07E7D29D4C17300A9956D /* EvilIcons.ttf */; };
 		B7D07E8E29D4C17300A9956D /* SimpleLineIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B7D07E7E29D4C17300A9956D /* SimpleLineIcons.ttf */; };
 		B7D07E8F29D4C17300A9956D /* MaterialIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B7D07E7F29D4C17300A9956D /* MaterialIcons.ttf */; };
 		CC2E9AAD29D8EA0F001E738A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CC2E9AAC29D8EA0F001E738A /* GoogleService-Info.plist */; };
-		F7C9A44D055444A555C2A5D3 /* Pods_ChreaApp_ChreaAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A267A97F65200A7BC2BA61B8 /* Pods_ChreaApp_ChreaAppTests.framework */; };
+		CC48E73129DE27C9001C1F54 /* ChreaAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC48E73029DE27C9001C1F54 /* ChreaAppTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		00E356F41AD99517003FC87E /* PBXContainerItemProxy */ = {
+		CC48E73229DE27C9001C1F54 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 83CBB9F71A601CBA00E9B192 /* Project object */;
 			proxyType = 1;
@@ -45,9 +38,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		00E356EE1AD99517003FC87E /* ChreaAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ChreaAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		00E356F11AD99517003FC87E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		00E356F21AD99517003FC87E /* ChreaAppTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ChreaAppTests.m; sourceTree = "<group>"; };
+		01D39D4DB10297F92757699D /* Pods_ChreaApp_ChreaAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ChreaApp_ChreaAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0F68E1D4E0352A903D7A8816 /* Pods_ChreaApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ChreaApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		13B07F961A680F5B00A75B9A /* ChreaApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChreaApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = ChreaApp/AppDelegate.h; sourceTree = "<group>"; };
 		13B07FB01A68108700A75B9A /* AppDelegate.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = AppDelegate.mm; path = ChreaApp/AppDelegate.mm; sourceTree = "<group>"; };
@@ -59,41 +53,36 @@
 		5B7EB9410499542E8C5724F5 /* Pods-ChreaApp-ChreaAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChreaApp-ChreaAppTests.debug.xcconfig"; path = "Target Support Files/Pods-ChreaApp-ChreaAppTests/Pods-ChreaApp-ChreaAppTests.debug.xcconfig"; sourceTree = "<group>"; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = ChreaApp/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		89C6BE57DB24E9ADA2F236DE /* Pods-ChreaApp-ChreaAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChreaApp-ChreaAppTests.release.xcconfig"; path = "Target Support Files/Pods-ChreaApp-ChreaAppTests/Pods-ChreaApp-ChreaAppTests.release.xcconfig"; sourceTree = "<group>"; };
-		A267A97F65200A7BC2BA61B8 /* Pods_ChreaApp_ChreaAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ChreaApp_ChreaAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		B7D07E7029D4C17300A9956D /* Fontisto.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Fontisto.ttf; sourceTree = "<group>"; };
 		B7D07E7129D4C17300A9956D /* Octicons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Octicons.ttf; sourceTree = "<group>"; };
 		B7D07E7229D4C17300A9956D /* Feather.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Feather.ttf; sourceTree = "<group>"; };
-		B7D07E7329D4C17300A9956D /* Entypo.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Entypo.ttf; sourceTree = "<group>"; };
 		B7D07E7429D4C17300A9956D /* FontAwesome5_Brands.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = FontAwesome5_Brands.ttf; sourceTree = "<group>"; };
 		B7D07E7529D4C17300A9956D /* MaterialCommunityIcons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = MaterialCommunityIcons.ttf; sourceTree = "<group>"; };
 		B7D07E7629D4C17300A9956D /* AntDesign.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = AntDesign.ttf; sourceTree = "<group>"; };
-		B7D07E7729D4C17300A9956D /* Foundation.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Foundation.ttf; sourceTree = "<group>"; };
-		B7D07E7829D4C17300A9956D /* Ionicons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Ionicons.ttf; sourceTree = "<group>"; };
 		B7D07E7929D4C17300A9956D /* FontAwesome5_Solid.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = FontAwesome5_Solid.ttf; sourceTree = "<group>"; };
-		B7D07E7A29D4C17300A9956D /* FontAwesome5_Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = FontAwesome5_Regular.ttf; sourceTree = "<group>"; };
-		B7D07E7B29D4C17300A9956D /* FontAwesome.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = FontAwesome.ttf; sourceTree = "<group>"; };
 		B7D07E7C29D4C17300A9956D /* Zocial.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Zocial.ttf; sourceTree = "<group>"; };
-		B7D07E7D29D4C17300A9956D /* EvilIcons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = EvilIcons.ttf; sourceTree = "<group>"; };
 		B7D07E7E29D4C17300A9956D /* SimpleLineIcons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = SimpleLineIcons.ttf; sourceTree = "<group>"; };
 		B7D07E7F29D4C17300A9956D /* MaterialIcons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = MaterialIcons.ttf; sourceTree = "<group>"; };
 		CC2E9AAC29D8EA0F001E738A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "ChreaApp/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		CC48E72E29DE27C9001C1F54 /* ChreaAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ChreaAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CC48E73029DE27C9001C1F54 /* ChreaAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChreaAppTests.swift; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		00E356EB1AD99517003FC87E /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				5DC01776329E02039CD83130 /* Pods_ChreaApp_ChreaAppTests.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		13B07F8C1A680F5B00A75B9A /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0930B73FF1C97CE95005E401 /* Pods_ChreaApp.framework in Frameworks */,
+				0930B73FF1C97CE95005E401 /* BuildFile in Frameworks */,
+				220B059C13374B01A4C7D117 /* Pods_ChreaApp.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CC48E72B29DE27C9001C1F54 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B5FE3AF936C59AE8ACA550FD /* Pods_ChreaApp_ChreaAppTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -121,7 +110,6 @@
 			isa = PBXGroup;
 			children = (
 				CC2E9AAC29D8EA0F001E738A /* GoogleService-Info.plist */,
-				B7D07E6F29D4C17300A9956D /* Fonts */,
 				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
 				13B07FB01A68108700A75B9A /* AppDelegate.mm */,
 				13B07FB51A68108700A75B9A /* Images.xcassets */,
@@ -136,8 +124,8 @@
 			isa = PBXGroup;
 			children = (
 				ED297162215061F000B7C4FE /* JavaScriptCore.framework */,
-				A21E8E1EC6C7E2E310FC2556 /* Pods_ChreaApp.framework */,
-				E40F30A6956530154A932D27 /* Pods_ChreaApp_ChreaAppTests.framework */,
+				0F68E1D4E0352A903D7A8816 /* Pods_ChreaApp.framework */,
+				01D39D4DB10297F92757699D /* Pods_ChreaApp_ChreaAppTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -155,9 +143,11 @@
 				13B07FAE1A68108700A75B9A /* ChreaApp */,
 				832341AE1AAA6A7D00B99B32 /* Libraries */,
 				00E356EF1AD99517003FC87E /* ChreaAppTests */,
+				CC48E72F29DE27C9001C1F54 /* ChreaAppTests */,
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
 				BBD78D7AC51CEA395F1C20DB /* Pods */,
+				CC13573E29DCE31F0004B865 /* Recovered References */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -168,33 +158,9 @@
 			isa = PBXGroup;
 			children = (
 				13B07F961A680F5B00A75B9A /* ChreaApp.app */,
-				00E356EE1AD99517003FC87E /* ChreaAppTests.xctest */,
+				CC48E72E29DE27C9001C1F54 /* ChreaAppTests.xctest */,
 			);
 			name = Products;
-			sourceTree = "<group>";
-		};
-		B74251F029DB8AA500E8611A /* Fonts */ = {
-			isa = PBXGroup;
-			children = (
-				B74251F129DB8AA500E8611A /* Fontisto.ttf */,
-				B74251F229DB8AA500E8611A /* Octicons.ttf */,
-				B74251F329DB8AA500E8611A /* Feather.ttf */,
-				B74251F429DB8AA500E8611A /* Entypo.ttf */,
-				B74251F529DB8AA500E8611A /* FontAwesome5_Brands.ttf */,
-				B74251F629DB8AA500E8611A /* MaterialCommunityIcons.ttf */,
-				B74251F729DB8AA500E8611A /* AntDesign.ttf */,
-				B74251F829DB8AA500E8611A /* Foundation.ttf */,
-				B74251F929DB8AA500E8611A /* Ionicons.ttf */,
-				B74251FA29DB8AA500E8611A /* FontAwesome5_Solid.ttf */,
-				B74251FB29DB8AA500E8611A /* FontAwesome5_Regular.ttf */,
-				B74251FC29DB8AA500E8611A /* FontAwesome.ttf */,
-				B74251FD29DB8AA500E8611A /* Zocial.ttf */,
-				B74251FE29DB8AA500E8611A /* EvilIcons.ttf */,
-				B74251FF29DB8AA500E8611A /* SimpleLineIcons.ttf */,
-				B742520029DB8AA500E8611A /* MaterialIcons.ttf */,
-			);
-			name = Fonts;
-			path = "../node_modules/react-native-vector-icons/Fonts";
 			sourceTree = "<group>";
 		};
 		BBD78D7AC51CEA395F1C20DB /* Pods */ = {
@@ -208,29 +174,33 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		CC13573E29DCE31F0004B865 /* Recovered References */ = {
+			isa = PBXGroup;
+			children = (
+				B7D07E7C29D4C17300A9956D /* Zocial.ttf */,
+				B7D07E7E29D4C17300A9956D /* SimpleLineIcons.ttf */,
+				B7D07E7229D4C17300A9956D /* Feather.ttf */,
+				B7D07E7129D4C17300A9956D /* Octicons.ttf */,
+				B7D07E7429D4C17300A9956D /* FontAwesome5_Brands.ttf */,
+				B7D07E7629D4C17300A9956D /* AntDesign.ttf */,
+				B7D07E7F29D4C17300A9956D /* MaterialIcons.ttf */,
+				B7D07E7929D4C17300A9956D /* FontAwesome5_Solid.ttf */,
+				B7D07E7529D4C17300A9956D /* MaterialCommunityIcons.ttf */,
+			);
+			name = "Recovered References";
+			sourceTree = "<group>";
+		};
+		CC48E72F29DE27C9001C1F54 /* ChreaAppTests */ = {
+			isa = PBXGroup;
+			children = (
+				CC48E73029DE27C9001C1F54 /* ChreaAppTests.swift */,
+			);
+			path = ChreaAppTests;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		00E356ED1AD99517003FC87E /* ChreaAppTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "ChreaAppTests" */;
-			buildPhases = (
-				A55EABD7B0C7F3A422A6CC61 /* [CP] Check Pods Manifest.lock */,
-				00E356EA1AD99517003FC87E /* Sources */,
-				00E356EB1AD99517003FC87E /* Frameworks */,
-				00E356EC1AD99517003FC87E /* Resources */,
-				C59DA0FBD6956966B86A3779 /* [CP] Embed Pods Frameworks */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				00E356F51AD99517003FC87E /* PBXTargetDependency */,
-			);
-			name = ChreaAppTests;
-			productName = ChreaAppTests;
-			productReference = 00E356EE1AD99517003FC87E /* ChreaAppTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 		13B07F861A680F5B00A75B9A /* ChreaApp */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "ChreaApp" */;
@@ -252,20 +222,41 @@
 			productReference = 13B07F961A680F5B00A75B9A /* ChreaApp.app */;
 			productType = "com.apple.product-type.application";
 		};
+		CC48E72D29DE27C9001C1F54 /* ChreaAppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CC48E73429DE27C9001C1F54 /* Build configuration list for PBXNativeTarget "ChreaAppTests" */;
+			buildPhases = (
+				9C95A0CDF63950CAE9FB9A93 /* [CP] Check Pods Manifest.lock */,
+				CC48E72A29DE27C9001C1F54 /* Sources */,
+				CC48E72B29DE27C9001C1F54 /* Frameworks */,
+				CC48E72C29DE27C9001C1F54 /* Resources */,
+				E645E556E650B885464E77BB /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CC48E73329DE27C9001C1F54 /* PBXTargetDependency */,
+			);
+			name = ChreaAppTests;
+			productName = ChreaAppTests;
+			productReference = CC48E72E29DE27C9001C1F54 /* ChreaAppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		83CBB9F71A601CBA00E9B192 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 1340;
 				LastUpgradeCheck = 1210;
 				TargetAttributes = {
-					00E356ED1AD99517003FC87E = {
-						CreatedOnToolsVersion = 6.2;
-						TestTargetID = 13B07F861A680F5B00A75B9A;
-					};
 					13B07F861A680F5B00A75B9A = {
 						LastSwiftMigration = 1120;
+					};
+					CC48E72D29DE27C9001C1F54 = {
+						CreatedOnToolsVersion = 13.4.1;
+						TestTargetID = 13B07F861A680F5B00A75B9A;
 					};
 				};
 			};
@@ -283,30 +274,16 @@
 			projectRoot = "";
 			targets = (
 				13B07F861A680F5B00A75B9A /* ChreaApp */,
-				00E356ED1AD99517003FC87E /* ChreaAppTests */,
+				CC48E72D29DE27C9001C1F54 /* ChreaAppTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		00E356EC1AD99517003FC87E /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		13B07F8E1A680F5B00A75B9A /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B742520129DB8AA500E8611A /* Fontisto.ttf in Resources */,
-				B742520C29DB8AA500E8611A /* FontAwesome.ttf in Resources */,
-				B742520829DB8AA500E8611A /* Foundation.ttf in Resources */,
-				B742520B29DB8AA500E8611A /* FontAwesome5_Regular.ttf in Resources */,
-				B742520929DB8AA500E8611A /* Ionicons.ttf in Resources */,
-				B742520E29DB8AA500E8611A /* EvilIcons.ttf in Resources */,
-				B742520429DB8AA500E8611A /* Entypo.ttf in Resources */,
 				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
 				B7D07E8C29D4C17300A9956D /* Zocial.ttf in Resources */,
 				B7D07E8E29D4C17300A9956D /* SimpleLineIcons.ttf in Resources */,
@@ -319,6 +296,13 @@
 				B7D07E8929D4C17300A9956D /* FontAwesome5_Solid.ttf in Resources */,
 				B7D07E8529D4C17300A9956D /* MaterialCommunityIcons.ttf in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CC48E72C29DE27C9001C1F54 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -358,7 +342,7 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ChreaApp/Pods-ChreaApp-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		A55EABD7B0C7F3A422A6CC61 /* [CP] Check Pods Manifest.lock */ = {
+		9C95A0CDF63950CAE9FB9A93 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -402,7 +386,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		C59DA0FBD6956966B86A3779 /* [CP] Embed Pods Frameworks */ = {
+		E645E556E650B885464E77BB /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -441,14 +425,6 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		00E356EA1AD99517003FC87E /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				00E356F31AD99517003FC87E /* ChreaAppTests.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		13B07F871A680F5B00A75B9A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -458,75 +434,35 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		CC48E72A29DE27C9001C1F54 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CC48E73129DE27C9001C1F54 /* ChreaAppTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		00E356F51AD99517003FC87E /* PBXTargetDependency */ = {
+		CC48E73329DE27C9001C1F54 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 13B07F861A680F5B00A75B9A /* ChreaApp */;
-			targetProxy = 00E356F41AD99517003FC87E /* PBXContainerItemProxy */;
+			targetProxy = CC48E73229DE27C9001C1F54 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		00E356F61AD99517003FC87E /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5B7EB9410499542E8C5724F5 /* Pods-ChreaApp-ChreaAppTests.debug.xcconfig */;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = ChreaAppTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				OTHER_LDFLAGS = (
-					"-ObjC",
-					"-lc++",
-					"$(inherited)",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ChreaApp.app/ChreaApp";
-			};
-			name = Debug;
-		};
-		00E356F71AD99517003FC87E /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 89C6BE57DB24E9ADA2F236DE /* Pods-ChreaApp-ChreaAppTests.release.xcconfig */;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				COPY_PHASE_STRIP = NO;
-				INFOPLIST_FILE = ChreaAppTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				OTHER_LDFLAGS = (
-					"-ObjC",
-					"-lc++",
-					"$(inherited)",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ChreaApp.app/ChreaApp";
-			};
-			name = Release;
-		};
 		13B07F941A680F5B00A75B9A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 3B4392A12AC88292D35C810B /* Pods-ChreaApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = SV329B54UF;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = ChreaApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -541,6 +477,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = ChreaApp;
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -553,7 +490,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = SV329B54UF;
 				INFOPLIST_FILE = ChreaApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -567,6 +507,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = ChreaApp;
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
@@ -601,6 +542,7 @@
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "Apple Development: DeAndre' Taylor (39GMTKV5H5)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -673,6 +615,7 @@
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "Apple Development: DeAndre' Taylor (39GMTKV5H5)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
 				ENABLE_NS_ASSERTIONS = NO;
@@ -709,18 +652,71 @@
 			};
 			name = Release;
 		};
+		CC48E73529DE27C9001C1F54 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5B7EB9410499542E8C5724F5 /* Pods-ChreaApp-ChreaAppTests.debug.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MARKETING_VERSION = 1.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = jjtncv.ChreaAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ChreaApp.app/ChreaApp";
+			};
+			name = Debug;
+		};
+		CC48E73629DE27C9001C1F54 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 89C6BE57DB24E9ADA2F236DE /* Pods-ChreaApp-ChreaAppTests.release.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MARKETING_VERSION = 1.0;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = jjtncv.ChreaAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ChreaApp.app/ChreaApp";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "ChreaAppTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				00E356F61AD99517003FC87E /* Debug */,
-				00E356F71AD99517003FC87E /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "ChreaApp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -735,6 +731,15 @@
 			buildConfigurations = (
 				83CBBA201A601CBA00E9B192 /* Debug */,
 				83CBBA211A601CBA00E9B192 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CC48E73429DE27C9001C1F54 /* Build configuration list for PBXNativeTarget "ChreaAppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CC48E73529DE27C9001C1F54 /* Debug */,
+				CC48E73629DE27C9001C1F54 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

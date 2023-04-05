@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import {StyleSheet, Image, View, ImageBackground, Text, SafeAreaView, StatusBar, useColorScheme, Touchable, TouchableOpacity, TextInput} from 'react-native';
 import { Colors } from 'react-native/Libraries/NewAppScreen';
 import { useNavigation } from '@react-navigation/native';
@@ -13,8 +13,7 @@ export default function LoginPage({navigation, route}){
     const [username, setUsername] = React.useState('');
     const [password, setPassword] = React.useState('');
     const [passwordError, setPasswordError] = React.useState('');
-    const [confirmPassword, setConfirmPassword] = React.useState('');
-    const [confirmPasswordError, setConfirmPasswordError] = React.useState('');
+    const [usernameError, setUsernameError] = React.useState('');
 
     const backgroundStyle = {
         backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
@@ -36,12 +35,36 @@ export default function LoginPage({navigation, route}){
             .catch((error) => {
                 const errorCode = error.code;
                 const errorMessage = error.message;
+                if (error.code === 'auth/invalid-email') {
+                    setUsernameError('Bad Email Format');
+                    setPasswordError('');
+                }
+                else {
+                    setUsernameError('Invalid Username or Password.');
+                    setPasswordError('');
+                }
                 console.log(errorMessage);
 
             });   
         }
+        else {
+            if(username.length < 5) {
+                setUsernameError('Email should be at least 5 characters.');
+            }
+            else {
+                setUsernameError('');
+            }
+            if(password.length < 5) {
+                setPasswordError('Password should be at least 5 characters.');
+            }
+            else {
+                setPasswordError('');
+            }
+        }
     };
 
+    useEffect(() => {
+    })
 
     return(
 
@@ -62,6 +85,7 @@ export default function LoginPage({navigation, route}){
                 placeholder="username"
                 maxLength={25}
             />
+            {usernameError ? <Text style={styles.error}>{usernameError}</Text> : null}
             <Text style={styles.inputTitle}>Password:</Text>
             <TextInput
                 style={styles.input}
@@ -72,7 +96,7 @@ export default function LoginPage({navigation, route}){
                 secureTextEntry={true}
                 maxLength={25}
             />
-                {/* <DropdownComponent /> */}
+            {passwordError ? <Text style={styles.error}>{passwordError}</Text> : null}
             
             <View style={styles.container2}>
                 <View>
@@ -109,6 +133,12 @@ const styles = StyleSheet.create({
     container2:{
         flex: 2,
         marginTop: 60,
+    },
+
+    error:{
+        marginLeft: 12,
+        marginTop: 5,
+        color: '#ff0000'
     },
 
     input: {

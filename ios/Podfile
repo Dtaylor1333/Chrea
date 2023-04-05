@@ -1,7 +1,7 @@
 require_relative '../node_modules/react-native/scripts/react_native_pods'
 require_relative '../node_modules/@react-native-community/cli-platform-ios/native_modules'
 
-platform :ios, min_ios_version_supported
+platform :ios, '12.4'
 prepare_react_native_project!
 use_modular_headers!
 
@@ -14,7 +14,7 @@ use_modular_headers!
 #   dependencies: {
 #     ...(process.env.NO_FLIPPER ? { 'react-native-flipper': { platforms: { ios: null } } } : {}),
 # ```
-flipper_config = ENV['NO_FLIPPER'] == "1" ? FlipperConfiguration.disabled : FlipperConfiguration.enabled
+flipper_config = FlipperConfiguration.disabled
 
 linkage = ENV['USE_FRAMEWORKS']
 if linkage != nil
@@ -23,6 +23,7 @@ if linkage != nil
 end
 
 target 'ChreaApp' do
+  use_frameworks! :linkage => :static
   config = use_native_modules!
   use_frameworks! 
   # Flags change depending on the env values.

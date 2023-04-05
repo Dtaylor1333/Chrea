@@ -13,6 +13,7 @@ import dropdownStyles from '../styles/dropdownStyles';
 import buttonStyles from '../styles/buttonStyles';
 import { Dropdown } from 'react-native-element-dropdown';
 import { screensEnabled } from 'react-native-screens';
+import { child, get, getDatabase, ref } from '@firebase/database';
 
 
 
@@ -50,16 +51,17 @@ export default function PlaceSelectPage({navigation, route}){
     const [isFocus, setIsFocus] = useState(false);
     const [location, setLocation] = useState("Pick");
     const [isLoading, setLoading] = useState(true);
-    const [data, setData] = useState([{value: "All Cities"}]);;
+    const [data, setData] = useState([{value: "All Cities"}])
+    const db = getDatabase();
+    const dbRef = ref(db);
 
-    
     const getLocations = async () => {
         try {
-            const response = await fetch('https://ec2-3-84-42-180.compute-1.amazonaws.com/mock/chrea_mock_db.json');
-            const json = await response.json();
-            console.log(json["locations"])
-            json["locations"].map((location: string )=> { setData(current => [...current, {value: location}])})
-        
+            get(child(dbRef, "locations")).then((snapshot) => {
+                if(snapshot.exists()) {
+                    snapshot.val().map((location: string )=> { setData(current => [...current, {value: location}])})
+                }
+            })
         } catch (error) {
             console.error(error, "FAILURE");
 
@@ -110,7 +112,6 @@ export default function PlaceSelectPage({navigation, route}){
                         onFocus={() => setIsFocus(true)}
                         onBlur={() => setIsFocus(false)}
                         onChange={item => {
-                        // setValue(item.value);
                         setIsFocus(false);
                         setLocation(item.value);
                         }}

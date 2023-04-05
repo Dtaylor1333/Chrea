@@ -1,5 +1,5 @@
 import React from 'react';
-import {StyleSheet, Text, Image, View, ImageBackground, SafeAreaView, Button, StatusBar, Linking} from 'react-native';
+import {StyleSheet, Text, Image, View, ImageBackground, SafeAreaView, Button, StatusBar, Linking, LogBox} from 'react-native';
 import WelcomePage from './Pages/WelcomePage';
 import PlaceSelectPage from './Pages/PlaceSelectPage';
 import { useState, useRef, useCallback, useEffect, } from 'react';
@@ -24,6 +24,8 @@ const Stack = createNativeStackNavigator();
 
 
 export default function App () {
+
+  LogBox.ignoreAllLogs();
 
   return (
 

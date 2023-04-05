@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useLayoutEffect, useRef, useState } from 'react';
 import {StyleSheet, Image, View, ImageBackground, Text, SafeAreaView, StatusBar, useColorScheme, Touchable, TouchableOpacity, TextInput} from 'react-native';
 import DropdownComponent from './DropdownTemplate';
 import FlatButton from './FlatButton';
@@ -21,6 +21,7 @@ export default function CreateAccount({navigation, route}){
     const [confirmPassword, setConfirmPassword] = React.useState('');
     const [confirmPasswordError, setConfirmPasswordError] = React.useState('');
     const [isLoading, setLoading] = useState(false);
+    const firstRender = useFirstRender();
     const [responseOk, setResponse] = useState(false);
 
     const backgroundStyle = {
@@ -29,15 +30,13 @@ export default function CreateAccount({navigation, route}){
 
 const handleLogin = () => {
     if (password.length < 6) {
-      setPasswordError('Password must be at least 5 characters long');
-    } else {
-      setPasswordError('');
+      setPasswordError('Password must be at least 5 characters long.');
     }
 
-    if (confirmPassword !== password) {
-      setConfirmPasswordError('Passwords do not match');
+    else if (confirmPassword !== password) {
+        setPasswordError('Passwords do not match.');
     } else {
-      setConfirmPasswordError('');
+        setPasswordError('');
     }
 
     if (password.length >= 6 && confirmPassword === password) {
@@ -47,46 +46,58 @@ const handleLogin = () => {
     }
   };
 
-  useEffect(() => {
-    firebase
-        .auth()
-        .createUserWithEmailAndPassword(email, password)
-        .then((response: any) => {
-            const uid = response.user.uid
-            const data = {
-                id: uid,
-                email,
-            };
-            const usersRef = firebase.firestore().collection('users')
-            usersRef
-                .doc(uid)
-                .set(data)
-                .then(() => {
-                    setResponse(true);
+
+    function useFirstRender() {
+        const firstRender = useRef(true);
+      
+        useEffect(() => {
+          firstRender.current = false;
+        }, []);
+      
+        return firstRender.current;
+    }
+    
+    useEffect(() => {
+        if (!firstRender) {
+            firebase
+                .auth()
+                .createUserWithEmailAndPassword(email, password)
+                .then((response: any) => {
+                    const uid = response.user.uid
+                    const data = {
+                        id: uid,
+                        email,
+                    };
+                    const usersRef = firebase.firestore().collection('users')
+                    usersRef
+                        .doc(uid)
+                        .set(data)
+                        .then(() => {
+                            setResponse(true);
+                        })
+                        .catch((error: any) => {
+                            setPasswordError(error)
+                            setLoading(false)
+                        })
+                        .then(
+                            navigation.navigate("Login Page")
+                        );
                 })
                 .catch((error: any) => {
-                    setPasswordError(error)
+                    console.log(error)
+                    setConfirmPassword(error)
                     setLoading(false)
+
+                    if (error.code === 'auth/invalid-email')
+                    setEmailError('Bad Email Format.');
+                    else 
+                    setEmailError('')
                 })
-                .then(
-                    navigation.navigate("Login Page")
-                );
-        })
-        .catch((error: any) => {
-            console.log(error)
-            setConfirmPassword(error)
-            setLoading(false)
+        }
+      }, [firstRender, isLoading]);
 
-            if (error.code === 'auth/invalid-email')
-            setEmailError('Bad Email Format');
-            else 
-            setEmailError('')
 
-            // if (error.code === 'auth/missing-password') {
-            //     console.log('Please provide a password');
-            // }
-        });
-  }, [isLoading])
+
 
     
     return(
@@ -109,7 +120,7 @@ const handleLogin = () => {
                 placeholder="Enter email"
                 maxLength={25}
             />
-            {emailError ? <Text>{emailError}</Text> : null}
+            {emailError ? <Text style={styles.error}>{emailError}</Text> : null}
             <Text style={styles.inputTitle}>Password:</Text>
             <TextInput
                 style={styles.input}
@@ -120,7 +131,7 @@ const handleLogin = () => {
                 secureTextEntry={true}
                 maxLength={25}
             />
-            {passwordError ? <Text>{passwordError}</Text> : null}
+            {passwordError ? <Text style={styles.error}>{passwordError}</Text> : null}
             <Text style={styles.inputTitle}>Confirm Password</Text>
             <TextInput
                 style={styles.input}
@@ -131,8 +142,8 @@ const handleLogin = () => {
                 secureTextEntry={true}
                 maxLength={25}
             />
-            {confirmPasswordError ? <Text>{confirmPasswordError}</Text> : null} 
-            {passwordError ? <Text>{passwordError}</Text> : null}
+            {confirmPasswordError ? <Text style={styles.error}>{confirmPasswordError}</Text> : null} 
+            {passwordError ? <Text style={styles.error}>{passwordError}</Text> : null}
             <Button title="Already have an account" onPress={() => navigation.navigate("Login Page")}/>
             <View style={styles.container2}>
                 <View>
@@ -169,6 +180,12 @@ const styles = StyleSheet.create({
     container2:{
         flex: 2,
         marginTop: 40,
+    },
+
+    error:{
+        marginLeft: 12,
+        marginTop: 5,
+        color: '#ff0000'
     },
 
     input: {

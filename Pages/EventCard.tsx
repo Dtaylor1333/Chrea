@@ -2,29 +2,46 @@ import React, { useEffect, useState } from "react"
 import Event from "../backend/models/event.model"
 import { SafeAreaView, Text, View, StyleSheet, Image, TouchableOpacity, RefreshControl, ScrollView, FlatList} from 'react-native';
 import eventCardStyles from "../styles/eventCardStyles";
+import { child, get, getDatabase, ref } from "@firebase/database";
+import { useIsFocused } from "@react-navigation/core";
+import {
+    getStorage,
+    ref as refS,
+    getDownloadURL
+  } from 'firebase/storage';
 
-export default function EventCard({navigation, route, event, eventCardStyles, user}) {
+export default function EventCard({location, navigation, route, event, eventCardStyles}) {
 
+    function getRandomInt(min, max) {
+        min = Math.ceil(min);
+        max = Math.floor(max);
+        return Math.floor(Math.random() * (max - min + 1)) + min;
+    }
 
-    /*const [img, setImg] = useState("");
+    const storage = getStorage();
+    const [image, setImage] = useState("../Images/ChreaLogo.png");
+    const [pImage, setpImage] = useState("../Images/ChreaLogo.png")
+    const [rerender, setRerender] = useState(true)
+    const [isBack, setBack] = useState(false)
 
-    const fetchImage = async () => {
-        const res = await fetch();
-        const imageBlob = await res.blob();
-        const imageObjectURL = URL.createObjectURL(imageBlob);
-        setImg(imageObjectURL);
-    };
+    async function getImage() {
+        await getDownloadURL(refS(storage, `Images/${event.event_flyer}`)).then((url) => setImage(url));
+    }
+
+    async function getPromoterImage() {
+        await getDownloadURL(refS(storage, `Images/Headshot${getRandomInt(1,6)}.jpg`)).then((url) => setpImage(url));
+    }
 
     useEffect(() => {
-        fetchImage();
-    }, []);*/
-    
+        getImage()
+        getPromoterImage()
+    }, [])
     
     return (
         <View>
-            <TouchableOpacity style={eventCardStyles.card} onPress={() => navigation.navigate("Event Details", {event: event, user: user})}>
+            <TouchableOpacity style={eventCardStyles.card} onPress={() => navigation.navigate("Event Details", {event: event})}>
                 <Image style={eventCardStyles.cardImg}
-                    source={{uri: `http://ec2-3-84-42-180.compute-1.amazonaws.com/Images/${event.event_flyer}`}}></Image>
+                    source={{uri: image}}></Image>
             <View style={{flexDirection:'row', height: 50}}>   
                 <Text style = {eventCardStyles.eventName}>{event.event_title}</Text>
                 <View>
@@ -42,11 +59,11 @@ export default function EventCard({navigation, route, event, eventCardStyles, us
                         </View>
                 </View>
             </View>
-                <Text style={eventCardStyles.catagory}>{event.venue_type}</Text>
+                <Text style={eventCardStyles.catagory}>{event.category[0]}</Text>
                 <Text style={eventCardStyles.time}>8PM-1:30AM </Text>
                     <View style={{flexDirection: 'row'}}>
-                        <Image style={eventCardStyles.promoterImg} source={{uri: `http://ec2-3-84-42-180.compute-1.amazonaws.com/Images/${event.promoter_image}`}}></Image>
-                        <Text style={eventCardStyles.promoterName}>Promoted by {event.promoter}</Text>
+                        <Image style={eventCardStyles.promoterImg} source={{uri: pImage}}></Image>
+                        <Text style={eventCardStyles.promoterName}>Promoted by {event.promoter_name}</Text>
                     </View>
             </TouchableOpacity>
         </View>
