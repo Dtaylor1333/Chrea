@@ -1,5 +1,5 @@
 import React from 'react';
-import {StyleSheet, Text, Image, View, ImageBackground, SafeAreaView, Button, StatusBar, Linking} from 'react-native';
+import {StyleSheet, Text, Image, View, ImageBackground, SafeAreaView, Button, StatusBar, Linking, LogBox} from 'react-native';
 import WelcomePage from './Pages/WelcomePage';
 import PlaceSelectPage from './Pages/PlaceSelectPage';
 import { useState, useRef, useCallback, useEffect, } from 'react';
@@ -17,6 +17,11 @@ import EventDetails2 from './Pages/EventDetails2';
 import CardlistSortTest from './Pages/CardlistSortTest';
 import LoginPage from './Pages/LoginPage';
 import CreateAccount from './Pages/CreateAccount';
+import BottomTabs from './Pages/BottomTabs';
+import AppContext from './AppContext';
+import { getAuth, onAuthStateChanged } from 'firebase/auth';
+import firebase from './src/firebase/config';
+import YourMoves from './Pages/YourMoves';
 
 
 
@@ -24,45 +29,75 @@ const Stack = createNativeStackNavigator();
 
 
 export default function App () {
+  
+  LogBox.ignoreAllLogs();
+  const [location, setLocation] = useState("");
+  const [loggedIn, setLoggedIn] = useState(false);
 
+  const chooseLocation = (choice: string) => {
+    setLocation(choice)
+  };
+
+  const locationSettings = {
+    locationName: location,
+    setLocation,
+    chooseLocation,
+  };
+
+  const logged = firebase.auth().onAuthStateChanged((user) => {
+      if (user) {
+        console.log('user is logged');
+        setLoggedIn(true)
+      }
+      console.log("I TRIED")
+  });
+
+  useEffect(() => {
+    logged
+  }, [loggedIn])
+
+if (loggedIn) {
+  console.log("YES USER")
   return (
-
-     <NavigationContainer>
+    <AppContext.Provider value={locationSettings}>
+    <NavigationContainer>
       <View style={styles.container}>
-        {/* <FindEvents /> */}
-        
-        {/* <MainContainer /> */}
-        {/* <Dashboard /> */}
-        {/* <MoreDetails /> */}
-
         { <Stack.Navigator screenOptions={{headerShown: false}}>
+          <Stack.Screen name = "Home" component= {BottomTabs}/>
+          <Stack.Screen name = "Event Details" component= {EventDetails}/>
           <Stack.Screen name = "Welcome Page" component= {WelcomePage}/>
           <Stack.Screen name = "Create Account Page" component= {CreateAccount}/>
           <Stack.Screen name = "Login Page" component={LoginPage}/>
-          <Stack.Screen name = "Choose Location" component= {PlaceSelectPage}/>
-          <Stack.Screen name = "Best Moves" component= {BestMoves}/>
-          <Stack.Screen name = "Event Details" component= {EventDetails}/>
+          <Stack.Screen name = "Choose Location" component= {PlaceSelectPage}/>    
         </Stack.Navigator> }
-        {/* <ListOrderTest /> */}
-       { /*<CardlistSortTest navigation={undefined} route={undefined} />*/}
-        {/* <AnotherTest /> */}
-        
-        {/* <Test /> */}
-        {/* ----------------------------WORKING PAGES---------------------- */}
-        {/* <LoadingScreen /> */}
-        {/* <WelcomePage /> */}
-        {/* <PlaceSelectPage /> */}
-        {/* <BestMoves /> */}
-        {/* <EventDetails /> */}
-        {/* <WelcomePage2 /> */}
-        {/* <Dashboard /> */}
-        {/* -------------------------------------------------- */}
     </View>   
     
     </NavigationContainer>
+    </AppContext.Provider>
   );
-};
+} else {
+  console.log("NO-USER")
+  return (
+    <AppContext.Provider value={locationSettings}>
+    <NavigationContainer>
+      <View style={styles.container}>
+        { <Stack.Navigator screenOptions={{headerShown: false}}>
+          
+          <Stack.Screen name = "Login Page" component={LoginPage}/>
+          <Stack.Screen name = "Choose Location" component= {PlaceSelectPage}/>
+          <Stack.Screen name = "Home" component= {BottomTabs}/>
+          <Stack.Screen name = "Event Details" component= {EventDetails}/>
+          <Stack.Screen name = "Welcome Page" component= {WelcomePage}/>
+          <Stack.Screen name = "Create Account Page" component= {CreateAccount}/>
+        </Stack.Navigator> }
+    </View>   
+    
+    </NavigationContainer>
+    </AppContext.Provider>
+  );
+}
 
+}
 const styles = StyleSheet.create({
 
   container: {
@@ -89,3 +124,6 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     },
 });
+
+
+

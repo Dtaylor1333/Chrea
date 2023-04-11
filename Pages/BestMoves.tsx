@@ -1,5 +1,5 @@
-import React, { Component, useEffect, useState } from 'react';
-import { SafeAreaView, Text, View, StyleSheet, Image, TouchableOpacity, RefreshControl, ScrollView, FlatList} from 'react-native';
+import React, { Component, useContext, useEffect, useState } from 'react';
+import { SafeAreaView, Text, View, StyleSheet, Image, TouchableOpacity, RefreshControl, ScrollView, FlatList, ImageBackground, Modal, Pressable, Alert} from 'react-native';
 import FindEvents from './FindEvents';
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
 import Fontisto from 'react-native-vector-icons/Fontisto';
@@ -7,176 +7,108 @@ import Entypo from 'react-native-vector-icons/Entypo';
 import WelcomePage from './WelcomePage';
 import BottomTabs from './BottomTabs';
 import Ionicons from 'react-native-vector-icons/Ionicons'
-import { useNavigation, useRoute } from '@react-navigation/native';
+import { useIsFocused, useNavigation, useRoute } from '@react-navigation/native';
 import EventDetails from './EventDetails';
 import Event from '../backend/models/event.model';
 import EventCard from './EventCard';
 import eventCardStylesM from '../styles/eventCardStyles';
 import eventCardStyles from '../styles/eventCardStyles copy';
-
-
- 
-
-
-// const BestMoves = () => {
-
-//     return (
-
-//         <SafeAreaView style = {styles.container1}>
-//           <Text style = {styles.heading1}>Best Moves </Text>
-//           <Text style = {styles.heading2}>Check out the top 4 moves in {'\n'}your area.</Text>
-//           <View> 
-//             <TouchableOpacity style={styles.cardM}>
-//                 <Image style={styles.cardImgM}
-//                     source={require('../Images/Img1.jpg')}></Image>
-//             <View style={{flexDirection:'row', height: 50}}>   
-//                 <Text style = {styles.eventNameM}>Best Party of The Year</Text>
-//                 <View>
-//                     <Text style={styles.attendanceM}>803</Text>
-//                     <Text style={styles.attendanceMP}>Attending</Text>
-//                         <View style={{flexDirection: 'row', marginLeft: 25}}>
-//                             <Image style={styles.profilesM} source={require('../Images/Headshot1.jpg')}></Image>
-//                             <Image style={styles.profilesM} source={require('../Images/Headshot2.jpg')}></Image>
-//                             <Image style={styles.profilesM} source={require('../Images/Headshot3.jpg')}></Image>
-//                             <Image style={styles.profilesM} source={require('../Images/Headshot4.jpg')}></Image>
-//                             <Image style={styles.profilesM} source={require('../Images/Headshot5.jpg')}></Image>
-//                             <Image style={styles.profilesM} source={require('../Images/Headshot6.jpg')}></Image>
-//                             <Text style={styles.plusM}>+</Text>
-//                         </View>
-//                 </View>
-//             </View>
-//                 <Text style={styles.catagoryM}>Venue Party</Text>
-//                 <Text style={styles.timeM}>8PM-1:30AM </Text>
-//                     <View style={{flexDirection: 'row'}}>
-//                         <Image style={styles.promoterImgM} source={require('../Images/Headshot1.jpg')}></Image>
-//                         <Text style={styles.promoterNameM}>Promoted by Future H.</Text>
-//                     </View>
-//             </TouchableOpacity>
-//           </View>
-          
-//           <View>
-//             <TouchableOpacity style={styles.card}>
-//                 <Image style={styles.cardImg}
-//                     source={require('../Images/Img2.jpg')}></Image>
-//             <View style={{flexDirection:'row', height: 50}}>
-//                 <Text style = {styles.eventName}>Dry Tals Cocktails</Text>
-//                 <View>
-//                     <Text style={styles.attendance}>589</Text>
-//                     <Text style={styles.attendanceP}>Attending</Text>
-//                         <View style={{flexDirection: 'row', marginLeft: 30}}>
-//                             <Image style={styles.profiles} source={require('../Images/Headshot1.jpg')}></Image>
-//                             <Image style={styles.profiles} source={require('../Images/Headshot2.jpg')}></Image>
-//                             <Image style={styles.profiles} source={require('../Images/Headshot3.jpg')}></Image>
-//                             <Image style={styles.profiles} source={require('../Images/Headshot4.jpg')}></Image>
-//                             <Image style={styles.profiles} source={require('../Images/Headshot5.jpg')}></Image>
-//                             <Image style={styles.profiles} source={require('../Images/Headshot6.jpg')}></Image>
-//                             <Text style={styles.plus}>+</Text>
-//                         </View>
-//                 </View>
-//             </View>
-//                 <Text style={styles.catagory}>Bar</Text>
-//                 <Text style={styles.time}>2PM-11PM</Text>
-//                     <View style={{flexDirection: 'row'}}>
-//                         <Image style={styles.promoterImg} source={require('../Images/Headshot1.jpg')}></Image>
-//                         <Text style={styles.promoterName}>Promoted by Keith G. </Text>
-//                     </View>
-//             </TouchableOpacity>
-//           </View>
-          
-//           <View>
-//             <TouchableOpacity style={styles.card}>
-//                 <Image style={styles.cardImg}
-//                 source={require('../Images/Img3.jpg')}></Image>
-//             <View style={{flexDirection:'row', height: 50}}>
-//                 <Text style = {styles.eventName}>My House Bar & Pub</Text>
-//                 <View>
-//                     <Text style={styles.attendance}>569</Text>
-//                     <Text style={styles.attendanceP}>Attending</Text>
-//                         <View style={{flexDirection: 'row', marginLeft: 30}}>
-//                             <Image style={styles.profiles} source={require('../Images/Headshot1.jpg')}></Image>
-//                             <Image style={styles.profiles} source={require('../Images/Headshot2.jpg')}></Image>
-//                             <Image style={styles.profiles} source={require('../Images/Headshot3.jpg')}></Image>
-//                             <Image style={styles.profiles} source={require('../Images/Headshot4.jpg')}></Image>
-//                             <Image style={styles.profiles} source={require('../Images/Headshot5.jpg')}></Image>
-//                             <Image style={styles.profiles} source={require('../Images/Headshot6.jpg')}></Image>
-//                             <Text style={styles.plus}>+</Text>
-//                         </View>
-//                 </View>
-//             </View>
-//                 <Text style={styles.catagory}>Bar & Resturant</Text>
-//                 <Text style={styles.time}>10AM-10PM</Text>
-//                     <View style={{flexDirection: 'row'}}>
-//                         <Image style={styles.promoterImg} source={require('../Images/Headshot1.jpg')}></Image>
-//                         <Text style={styles.promoterName}>Promoted by EYL.     </Text>
-//                     </View>
-//             </TouchableOpacity>
-//           </View>
-
-//           <View>
-//             <TouchableOpacity style={styles.card}>
-//                 <Image style={styles.cardImg}
-//                     source={require('../Images/Img4.jpg')}></Image>
-//                 <View style={{flexDirection:'row', height: 50}}>
-//                     <Text style = {styles.eventName}>Back to School Darty</Text>
-//                     <View>
-//                     <Text style={styles.attendance}>321</Text>
-//                     <Text style={styles.attendanceP}>Attending</Text>
-//                         <View style={{flexDirection: 'row', marginLeft: 30}}>
-//                             <Image style={styles.profiles} source={require('../Images/Headshot1.jpg')}></Image>
-//                             <Image style={styles.profiles} source={require('../Images/Headshot2.jpg')}></Image>
-//                             <Image style={styles.profiles} source={require('../Images/Headshot3.jpg')}></Image>
-//                             <Image style={styles.profiles} source={require('../Images/Headshot4.jpg')}></Image>
-//                             <Image style={styles.profiles} source={require('../Images/Headshot5.jpg')}></Image>
-//                             <Image style={styles.profiles} source={require('../Images/Headshot6.jpg')}></Image>
-//                             <Text style={styles.plus}>+</Text>
-//                         </View>
-//                     </View>
-//                 </View>
-//                 <Text style={styles.catagory}>Day Party</Text>
-//                 <Text style={styles.time}>11AM-7PM</Text>
-//                     <View style={{flexDirection: 'row'}}>
-//                         <Image style={styles.promoterImg} source={require('../Images/Headshot1.jpg')}></Image>
-//                         <Text style={styles.promoterName}>Promoted by Howard U.</Text>
-//                     </View>
-//             </TouchableOpacity>
-//           </View>
-          
-//         {/* <BottomTabs /> */}
-//         </SafeAreaView>
-//     )
-//  }
-
-// export default BestMoves;
+import { child, get, getDatabase, orderByChild, query, ref } from '@firebase/database';
+import { getAuth } from 'firebase/auth';
+import AppContext from '../AppContext';
+import SwitchSelector from 'react-native-switch-selector';
 
 
 export default function BestMoves({navigation, route}){
 
-    const { location, user } = route.params
+    const auth = getAuth();
+    const user = auth.currentUser;
+    const myContext = useContext(AppContext);
+    //const { location } = route.params
+    const isFocused = useIsFocused()
     const [refreshing, setRefreshing] = React.useState(false);
     const [isLoading, setLoading] = useState(true);
     const [data, setData] = useState<Event[]>([]);
-    const imagesUrls = []
+    const [myData, setMyData] = useState<Event[]>([]);
+    const db = getDatabase();
+    const [voted, setVoted] = useState<boolean[]>([])
+    const [modalVisible, setModalVisible] = useState(false)
+    const [bestMoves, setMoves] = useState(0)
+    const dbRef = ref(db);
 
-    const getEvents = async (location: string) => {
+    const options = [
+        { label: "Best Moves", value: "bestMoves", disabled: true },
+        { label: "Your Moves", value: "yourMoves" },
+      ];
+
+      const optionsY = [
+        { label: "Best Moves", value: "bestMoves" },
+        { label: "Your Moves", value: "yourMoves", disabled: true},
+      ];
+
+    const getEvents = async () => {
         try {
-            const response = await fetch('https://ec2-3-84-42-180.compute-1.amazonaws.com/mock/chrea_mock_db.json');
-            const json = await response.json();
-            console.log(json)
-            setData(json["events"][location]);
-
-            data.forEach(element => {
-                imagesUrls.push(`https://ec2-3-84-42-180.compute-1.amazonaws.com/Images/${element.event_flyer}`)
-            });     
+            console.log(isLoading)
+            get(query(ref(db, `events/${myContext.locationName}`), orderByChild('votes'))).then((snapshot) => {
+                if(snapshot.exists()) {
+                    var count = 0
+                    snapshot.forEach((event) => {
+                        if (count == snapshot.size-1) {
+                            if (event.val().usersVoted && event.val().usersVoted[user!.uid] == true) {
+                                setVoted(current => [...current, true].reverse())
+                            }
+                            else {
+                                setVoted(current => [...current, false].reverse())
+                            }
+                            setData(current => [...current, event.val()].reverse())
+                        }
+                        else{
+                            if (event.val().usersVoted && event.val().usersVoted[user!.uid] == true) {
+                                setVoted(current => [...current, true])
+                            }
+                            else {
+                                setVoted(current => [...current, false])
+                            }
+                            setData(current => [...current, event.val()])
+                        }    
+                        count++;
+                    })
+                }
+                setLoading(false);
+            })
         } catch (error) {
             console.error(error, "FAILURE");
 
-        } finally {
-            setLoading(false);
         }
     };
 
-    // const navigation = useNavigation();
-    
+    const getMyEvents = async () => {
+        try {
+            console.log(isLoading)
+            get(query(ref(db, `events/${myContext.locationName}`), orderByChild('votes'))).then((snapshot) => {
+                if(snapshot.exists()) {
+                    var count = 0
+                    snapshot.forEach((event) => {
+                        if (count == snapshot.size-1) {
+                            if (event.val().usersVoted && event.val().usersVoted[user!.uid] == true) {
+                                setMyData(current => [...current, event.val()].reverse())
+                            }
+                        }
+                        else{
+                            if (event.val().usersVoted && event.val().usersVoted[user!.uid] == true) {
+                                setMyData(current => [...current, event.val()])
+                            }
+                        }    
+                        count++;
+                    })
+                }
+                setLoading(false);
+            })
+        } catch (error) {
+            console.error(error, "FAILURE");
+
+        }
+    };
 
     const onRefresh = React.useCallback(() => {
         setRefreshing(true);
@@ -185,33 +117,85 @@ export default function BestMoves({navigation, route}){
         }, 2000);
     }, []);
 
+
     useEffect(() => {
-        getEvents(location);
-    }, []);
+        setVoted([])
+        setData([])
+        setMyData([])
+        setLoading(true)
+        getEvents();
+        getMyEvents();
+    }, [isFocused]);
 
     if (isLoading) {
         return <Text>Loading...</Text>;
     }
 
-    return (
+    if(!bestMoves) {
+        return (
+            <ImageBackground style = {styles.backgroundImg} source = {require('../Images/LoadingPageBackground.png')}>
+            
+            <SafeAreaView style= {styles.width}>
+                <ScrollView refreshControl={
+            <RefreshControl refreshing={refreshing} onRefresh={onRefresh} />}>
+                <View style={styles.selector}>
+                    <SwitchSelector
+                    options={options}
+                    initial={bestMoves}
 
-        <SafeAreaView >
-            <ScrollView refreshControl={
-          <RefreshControl refreshing={refreshing} onRefresh={onRefresh} />}>
+                    onPress={() => setMoves(1)}
+                    borderColor={'#c65304'}
+                    buttonColor={'#c65304'}
+                    backgroundColor={'#f8eee2'}
+                    
+                    />
+                </View>
+            
+                <Text style = {styles.heading1}>Best Moves </Text>
+                <Text style = {styles.heading2}>Check out the top moves in {'\n'}your area.</Text>
             <View>
-        <Ionicons style={styles.backB} name="arrow-back-outline" onPress={() => navigation.goBack()}/>
-        </View>
-            <Text style = {styles.heading1}>Best Moves </Text>
-            <Text style = {styles.heading2}>Check out the top 4 moves in {'\n'}your area.</Text>
-        <View>
-            {data.map((event, index) => <EventCard user={user} event={event} navigation={navigation} route={route} eventCardStyles={index == 0 ? eventCardStylesM : eventCardStyles}></EventCard>)}
-        </View>
-        </ScrollView>
-        </SafeAreaView>
-    )
+                {data.map((event, index) => <EventCard attending={voted[index]} location={myContext.locationName} event={event} navigation={navigation} route={route} eventCardStyles={voted[index] ? eventCardStylesM : eventCardStyles}></EventCard>)}
+            </View>
+            </ScrollView> 
+            </SafeAreaView>
+            </ImageBackground>  
+        )
+    }
+    
+    else {
+        return (
+        <ImageBackground style = {styles.backgroundImg} source = {require('../Images/LoadingPageBackground.png')}>
+            <SafeAreaView style= {styles.width}>
+                <ScrollView refreshControl={
+            <RefreshControl refreshing={refreshing} onRefresh={onRefresh} />}>
+                <View style={styles.selector}>
+                    <SwitchSelector
+                    options={optionsY}
+                    initial={bestMoves}
+                    onPress={() => setMoves(0)}
+                    borderColor={'#c65304'}
+                    buttonColor={'#c65304'}
+                    backgroundColor={'#f8eee2'}
+                    
+                    />
+                </View>
+                <Text style = {styles.heading1}>Your Moves </Text>
+                <Text style = {styles.heading2}>Check out the moves you {'\n'}are going to attend.</Text>
+            <View>
+                {myData.map((event, index) => <EventCard attending={true} location={myContext.locationName} event={event} navigation={navigation} route={route} eventCardStyles={eventCardStylesM}></EventCard>)}
+            </View>
+            </ScrollView> 
+            </SafeAreaView>
+            </ImageBackground>
+        )
+    }
  }
 
 const styles = StyleSheet.create({
+
+    width: {
+        minWidth: '85%'
+    },
 
     heading1: {
         fontWeight: 'bold',
@@ -220,7 +204,7 @@ const styles = StyleSheet.create({
         textAlign: 'left',
         marginBottom: 6,
         marginLeft: 13,
-        marginTop: 0,
+        marginTop: 20,
     },
 
     heading2: {
@@ -237,6 +221,77 @@ const styles = StyleSheet.create({
         marginLeft: 10,
         marginTop: 0,
     },
-});
 
-    
+    profile:{
+        position: 'absolute',
+        color: '#3c1c07',
+        right: 30,
+        top: 80,
+        fontSize: 40,
+    },
+
+    profileX:{
+        position: 'absolute',
+        top: '10%',
+        right: '5%'
+    },
+
+    backgroundImg: {
+        // flex:1,
+        height: '102%',
+        width: '100%',
+        alignItems: 'center',
+        justifyContent: 'center',
+    },
+
+    centeredView: {
+        flex: 1,
+        justifyContent: 'center',
+        alignItems: 'center',
+        marginTop: 22,
+      },
+      modalView: {
+        margin: 20,
+        backgroundColor: 'white',
+        borderRadius: 20,
+        padding: 35,
+        alignItems: 'center',
+        shadowColor: '#000',
+        shadowOffset: {
+          width: 0,
+          height: 2,
+        },
+        shadowOpacity: 0.25,
+        shadowRadius: 4,
+        elevation: 5,
+      },
+      button: {
+        borderRadius: 20,
+        padding: 10,
+        elevation: 2,
+      },
+      buttonOpen: {
+        backgroundColor: '#F194FF',
+      },
+      buttonClose: {
+        backgroundColor: '#c65304',
+        margin: 10
+      },
+      buttonDelete: {
+        backgroundColor: 'red',
+        margin: 10
+      },
+      textStyle: {
+        color: 'white',
+        fontWeight: 'bold',
+        textAlign: 'center',
+      },
+      modalText: {
+        marginBottom: 15,
+        textAlign: 'center',
+      },
+      selector: {
+        width: '60%',
+        left: '20%'
+      }
+});

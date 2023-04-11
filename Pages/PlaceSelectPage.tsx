@@ -1,6 +1,6 @@
 <script src="http://localhost:8097"></script>
 
-import React, { useEffect, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import {StyleSheet, Image, View, ImageBackground, Text, SafeAreaView, StatusBar, useColorScheme, Touchable, TouchableOpacity} from 'react-native';
 import DropdownComponent from './DropdownTemplate';
 import FlatButton from './FlatButton';
@@ -13,6 +13,10 @@ import dropdownStyles from '../styles/dropdownStyles';
 import buttonStyles from '../styles/buttonStyles';
 import { Dropdown } from 'react-native-element-dropdown';
 import { screensEnabled } from 'react-native-screens';
+import { child, get, getDatabase, ref } from '@firebase/database';
+import AppContext from '../AppContext';
+import { set } from 'firebase/database';
+import { getAuth } from 'firebase/auth';
 
 
 
@@ -44,22 +48,23 @@ import { screensEnabled } from 'react-native-screens';
 export default function PlaceSelectPage({navigation, route}){
     // const navigation = useNavigation();
     // const Tab = createBottomTabNavigator();
-
-    const { user } = route.params
+    const myContext = useContext(AppContext);
     const isDarkMode = useColorScheme() === 'dark';
     const [isFocus, setIsFocus] = useState(false);
     const [location, setLocation] = useState("Pick");
     const [isLoading, setLoading] = useState(true);
-    const [data, setData] = useState([{value: "All Cities"}]);;
+    const [data, setData] = useState([{value: "No Choice"}])
+    const db = getDatabase();
+    const dbRef = ref(db);
+    const user = getAuth().currentUser
 
-    
     const getLocations = async () => {
         try {
-            const response = await fetch('https://ec2-3-84-42-180.compute-1.amazonaws.com/mock/chrea_mock_db.json');
-            const json = await response.json();
-            console.log(json["locations"])
-            json["locations"].map((location: string )=> { setData(current => [...current, {value: location}])})
-        
+            get(child(dbRef, "locations")).then((snapshot) => {
+                if(snapshot.exists()) {
+                    snapshot.val().map((location: string )=> { setData(current => [...current, {value: location}])})
+                }
+            })
         } catch (error) {
             console.error(error, "FAILURE");
 
@@ -67,6 +72,13 @@ export default function PlaceSelectPage({navigation, route}){
             setLoading(false);
         }
     };
+
+    function writeUserData() {
+        set(ref(db, 'users/' + user?.uid), {
+          email: user?.email,
+          location: myContext.locationName
+        });
+      }
 
     useEffect(() => {
         getLocations();
@@ -80,7 +92,6 @@ export default function PlaceSelectPage({navigation, route}){
         return (<Text>Loading...</Text>)
     }
 
-    console.log(data, "hihiihiihi")
     return(
 
         // <SafeAreaView>
@@ -110,9 +121,8 @@ export default function PlaceSelectPage({navigation, route}){
                         onFocus={() => setIsFocus(true)}
                         onBlur={() => setIsFocus(false)}
                         onChange={item => {
-                        // setValue(item.value);
                         setIsFocus(false);
-                        setLocation(item.value);
+                        myContext.chooseLocation(item.value)
                         }}
                     />
                     </View>
@@ -120,7 +130,7 @@ export default function PlaceSelectPage({navigation, route}){
                 <View>
                     <View style={buttonStyles.container2}>
                         <View>
-                        <TouchableOpacity onPress={()=> navigation.navigate("Best Moves", { location: location, user: user})}>
+                        <TouchableOpacity onPress={()=> {writeUserData(); navigation.navigate("Home")}}>
                             <View style = {buttonStyles.button2}>
                                 <Text style = {buttonStyles.buttonText3}> Confirm</Text>
                             </View>

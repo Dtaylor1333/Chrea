@@ -22,11 +22,7 @@ const styles = StyleSheet.create({
         },
 })
 
-interface LoadingScreenProps {
-  setIsLoading: Dispatch <SetStateAction<boolean>>;
-}
-
-const LoadingScreen = ({setIsLoading} : LoadingScreenProps) => {
+const LoadingScreen = () => {
   return(
     <View >
       <ImageBackground source = {require('../Images/LoadingPageBackground.png')} style = {styles.container}></ImageBackground>

@@ -1,10 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
 import {StyleSheet, Image, View, Text, Button, Pressable, SafeAreaView, StatusBar, useColorScheme, TouchableOpacity} from 'react-native';
 import { Colors, DebugInstructions, Header, LearnMoreLinks, ReloadInstructions,} from 'react-native/Libraries/NewAppScreen';
 import * as RootNavigation from '../RootNavigation';
 import PlaceSelectPage from "./PlaceSelectPage";
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { NavigationContainer, useNavigation } from '@react-navigation/native';
+import firebase from "firebase/compat";
+import { browserLocalPersistence, setPersistence } from "firebase/auth";
 
 
 
@@ -45,6 +47,14 @@ import { NavigationContainer, useNavigation } from '@react-navigation/native';
 // export default WelcomePage;
 
 export default function WelcomePage({navigation}: any){
+    
+    const [loggedIn, setLoggedIn] = useState(false)
+
+    firebase.auth().onAuthStateChanged((user) => {
+        if (user) {
+          setLoggedIn(true)
+        }
+    });
     
     const isDarkMode = useColorScheme() === 'dark';
 
