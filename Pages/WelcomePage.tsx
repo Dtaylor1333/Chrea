@@ -84,7 +84,7 @@ export default function WelcomePage({navigation}: any){
 const styles = StyleSheet.create({
 
     image1:{
-        height: 550,
+        height: '65%',
         width: '100%',
         justifyContent: 'center',
         alignItems: 'center',
@@ -113,13 +113,13 @@ const styles = StyleSheet.create({
     button:{
         color: '#c65304',
         borderRadius: 18,
-        marginTop: 55,
+        marginTop: '12%',
         alignItems: 'center',
         justifyContent: 'center',
         backgroundColor: '#C65304',
         marginLeft: 53,
         marginRight: 50,
-        marginBottom: 60,
+        marginBottom: '5%',
         padding: 15,
     },
 })

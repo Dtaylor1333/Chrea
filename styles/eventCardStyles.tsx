@@ -127,6 +127,7 @@ const eventCardStylesM = StyleSheet.create({
         // margin: 3,
         marginLeft: 5,
         marginTop: 6,
+        width: '70%',
     },
 
     plus: {

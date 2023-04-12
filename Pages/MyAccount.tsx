@@ -192,11 +192,12 @@ const styles = StyleSheet.create({
         flex:1,
         textAlign: 'center',
         alignContent: 'center',
-        marginTop: 100
+        marginTop: '20%'
         },
     icon: {
         textAlign: 'center',
         color: '#3c1c07',
+        marginTop: '5%'
     },
     container2:{
         flex: 2,
@@ -210,7 +211,6 @@ const styles = StyleSheet.create({
     },
     emailText:{
         fontSize: 30,
-        marginBottom: 20,
         textAlign: 'center',
         fontWeight: 'bold',
         color: '#3c1c07',

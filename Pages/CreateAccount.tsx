@@ -179,7 +179,7 @@ const styles = StyleSheet.create({
     
     container2:{
         flex: 2,
-        marginTop: 40,
+        marginTop: 20,
     },
 
     error:{
@@ -202,7 +202,7 @@ const styles = StyleSheet.create({
         textAlign: 'center',
         fontWeight: 'bold',
         color: '#3c1c07',
-        marginTop: 150,
+        marginTop: 130,
         },
 
     text2:{

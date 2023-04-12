@@ -13,6 +13,8 @@ export default function LoginPage({navigation, route}){
 
     const isDarkMode = useColorScheme() === 'dark';
     const [username, setUsername] = React.useState('');
+    const [email, setEmail] = React.useState('');
+    const [emailError, setEmailError] = React.useState('');
     const [password, setPassword] = React.useState('');
     const [passwordError, setPasswordError] = React.useState('');
     const [usernameError, setUsernameError] = React.useState('');
@@ -25,10 +27,10 @@ export default function LoginPage({navigation, route}){
 
     const handleLogin = () => {
 
-        if (username.length >= 5 && password.length >= 5) {
+        if (email.length >= 5 && password.length >= 5) {
         // Perform login logic here
-        console.log(`Username: ${username}, Password: ${password}`);
-        signInWithEmailAndPassword(auth, username, password)
+        console.log(`Email: ${email}, Password: ${password}`);
+        signInWithEmailAndPassword(auth, email, password)
             .then((userCredential) => {
                 // Signed in 
                 const user = userCredential.user;
@@ -50,11 +52,11 @@ export default function LoginPage({navigation, route}){
                 const errorCode = error.code;
                 const errorMessage = error.message;
                 if (error.code === 'auth/invalid-email') {
-                    setUsernameError('Bad Email Format');
+                    setEmailError('Bad Email Format');
                     setPasswordError('');
                 }
                 else {
-                    setUsernameError('Invalid Username or Password.');
+                    setEmailError('Invalid Username or Password.');
                     setPasswordError('');
                 }
                 console.log(errorMessage);
@@ -62,11 +64,11 @@ export default function LoginPage({navigation, route}){
             }); 
         }
         else {
-            if(username.length < 5) {
-                setUsernameError('Email should be at least 5 characters.');
+            if(email.length < 5) {
+                setEmailError('Email should be at least 5 characters.');
             }
             else {
-                setUsernameError('');
+                setEmailError('');
             }
             if(password.length < 5) {
                 setPasswordError('Password should be at least 5 characters.');
@@ -90,16 +92,16 @@ export default function LoginPage({navigation, route}){
             <Text style = {styles.text1}>Log in to your account</Text>
         </View>
         <View style={styles.container2}>
-            <Text style={styles.inputTitle}>Username:</Text>
+            <Text style={styles.inputTitle}>Email:</Text>
             <TextInput
                 style={styles.input}
-                onChangeText={setUsername}
+                onChangeText={setEmail}
                 autoCapitalize='none'
-                value={username}
-                placeholder="username"
+                value={email}
+                placeholder="email"
                 maxLength={25}
             />
-            {usernameError ? <Text style={styles.error}>{usernameError}</Text> : null}
+            {emailError ? <Text style={styles.error}>{emailError}</Text> : null}
             <Text style={styles.inputTitle}>Password:</Text>
             <TextInput
                 style={styles.input}
@@ -170,7 +172,7 @@ const styles = StyleSheet.create({
         fontWeight: 'bold',
         color: '#3c1c07',
         marginTop: 150,
-        width: 350,
+        width: '100%',
         },
 
     text2:{

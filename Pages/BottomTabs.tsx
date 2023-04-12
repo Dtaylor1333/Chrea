@@ -19,7 +19,7 @@ function BottomTabs() {
             <Tab.Navigator screenOptions={({ route }) => ({
                 tabBarStyle:{
                   backgroundColor:'#3c1c07',
-                  height: 85
+                  height: '10%',
                 },
                 tabBarItemStyle:{
                   marginTop: 5,
@@ -28,9 +28,9 @@ function BottomTabs() {
                   if (route.name === 'Best Moves') {
                   return <Ionicons name="trophy-outline" size={25} color={focused ? "tomato":"white"}/>
                   }
-                  if (route.name === 'Add Event') {
-                    return <Ionicons name="add-circle-outline" size={25} color={focused ? "tomato":"white"}/>
-                  }
+                  // if (route.name === 'Add Event') {
+                  //   return <Ionicons name="add-circle-outline" size={25} color={focused ? "tomato":"white"}/>
+                  // }
                   if (route.name === 'My Account') {
                     return <Ionicons name="person-circle-outline" size={25} color={focused ? "tomato":"white"}/>
                   }
@@ -42,7 +42,7 @@ function BottomTabs() {
                 tabBarInactiveTintColor: 'white',
             })}>
               <Tab.Screen name="Best Moves" component={BestMoves} options={{headerShown:false}}/>
-              <Tab.Screen name="Add Event" component={YourMoves} options={{headerShown:false}}/>  
+              {/* <Tab.Screen name="Add Event" component={YourMoves} options={{headerShown:false}}/>   */}
               <Tab.Screen name="My Account" component={MyAccount} options={{headerShown:false}}/>  
             </Tab.Navigator>
     );

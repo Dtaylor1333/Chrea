@@ -163,7 +163,7 @@ export default function EventDetails({navigation, route }) {
             <View>
                 <Text style={styles.heading}>{event.event_title}</Text>
                 <Text style={styles.address}>{event.address}</Text>
-                <Text style={styles.details}>{event.date} | OPEN | Ages: {event.ages} | Venue</Text>
+                <Text style={styles.details}>{event.date} | {event.time} | Ages: {event.ages} | Venue</Text>
             </View>
             <View style={{width: 122}}>
                 <Text style={styles.heading2}>Cover Charge</Text>
@@ -309,7 +309,7 @@ const styles = StyleSheet.create({
     directions: {
         fontSize: 18,
         color: '#c65304',
-        textAlign: 'right',
+        textAlign: 'center',
         marginTop: 25,
     },
 
@@ -318,7 +318,7 @@ const styles = StyleSheet.create({
         fontSize: 50,
         color: '#c65304',
         fontWeight: '800',
-        textAlign: 'right',
+        textAlign: 'center',
     },
 
     update:{
@@ -327,6 +327,7 @@ const styles = StyleSheet.create({
         textAlign: 'right',
         alignSelf: 'flex-end',
         width: 100,
+        marginRight: 18,
         // borderColor: 'red',
         // borderWidth: 2,
     },
@@ -334,7 +335,7 @@ const styles = StyleSheet.create({
     heading2:{
         fontSize: 15,
         fontWeight: '600',
-        textAlign: 'right',
+        textAlign: 'center',
         marginTop: 22,
     },
 
