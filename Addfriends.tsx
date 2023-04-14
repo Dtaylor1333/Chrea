@@ -143,10 +143,11 @@ const styles = StyleSheet.create({
     fontSize: 40,
     fontWeight: 'bold',
     marginBottom: 30,
+    marginTop: 20,
     color: '#3c1c07',
   },
   form: {
-    width: '80%',
+    width: '100%',
     maxWidth: 400,
     alignItems: 'center',
   },
