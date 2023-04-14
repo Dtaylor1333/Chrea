@@ -97,7 +97,7 @@ const handleShareLink = () => {
             <Text style={styles.buttonText}>Add Friend</Text>
         </TouchableOpacity>
 
-        <Text style={styles.heading2}>Share With Others</Text>
+        <Text style={styles.heading2}>Share Chrea With Others</Text>
         <Ionicons style={{fontSize: 30,}} name="share-social-outline" onPress={handleShareLink}/>
 
 
