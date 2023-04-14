@@ -143,7 +143,6 @@ const styles = StyleSheet.create({
     fontSize: 40,
     fontWeight: 'bold',
     marginBottom: 30,
-    marginTop: 50,
     color: '#3c1c07',
   },
   form: {
