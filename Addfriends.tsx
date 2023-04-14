@@ -4,6 +4,7 @@ import { View, TextInput, Button, Text, StyleSheet, Linking, Share } from 'react
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import { get, getDatabase, ref } from 'firebase/database';
 import { Auth, getAuth, setPersistence, signInWithEmailAndPassword } from "firebase/auth";
+import { ImageBackground } from 'react-native';
 
 const AddFriendScreen = (navigation, route) => {
   const [friendEmail, setFriendEmail] = useState('');
@@ -78,6 +79,7 @@ const handleShareLink = () => {
 
 
   return (
+    <ImageBackground style = {styles.backgroundImg} source = {require('../Images/LoadingPageBackground.png')}>
     <SafeAreaView>
     <View style={styles.container}>
       <Text style={styles.title}>Add Friends</Text>
@@ -119,12 +121,12 @@ const handleShareLink = () => {
       </View>
     </View>
     </SafeAreaView>
+    </ImageBackground>   
   );
 };
 
 const styles = StyleSheet.create({
   container: {
-    backgroundColor: '#fff',
     alignItems: 'center',
     justifyContent: 'center',
   },
@@ -188,6 +190,13 @@ const styles = StyleSheet.create({
     marginBottom: 10,
     color: '#3c1c07',
   },
+  backgroundImg: {
+    // flex:1,
+    height: '102%',
+    width: '100%',
+    alignItems: 'center',
+    justifyContent: 'center',
+},
 });
 
 export default AddFriendScreen;
