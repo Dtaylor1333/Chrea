@@ -135,6 +135,7 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     borderRadius: 8,
     padding: 20,
+    paddingTop: 10,
     width: '100%',
     marginTop: 20,
     height: 250,
@@ -185,7 +186,7 @@ const styles = StyleSheet.create({
     backgroundColor: '#3c1c07'
   },
   friendsHeading:{
-    fontSize: 20,
+    fontSize: 18,
     textAlign: 'center',
     marginBottom: 10,
     color: '#3c1c07',
